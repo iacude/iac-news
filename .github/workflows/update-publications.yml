@@ -3,8 +3,8 @@ name: Update publications data
 on:
   workflow_dispatch:
   schedule:
-    # Runs daily at 05:17 UTC. Adjust as needed; GitHub cron uses UTC.
-    - cron: "17 5 * * *"
+    # Runs every Friday at 05:17 UTC. Adjust as needed; GitHub cron uses UTC.
+    - cron: "17 5 * * 5"
 
 permissions:
   contents: write
