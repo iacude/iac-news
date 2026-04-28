@@ -1,0 +1,10 @@
+# One ORCID iD per line; lines starting with # are ignored.
+# Beispiel: 0000-0002-1825-0097
+# Trage hier die ORCID iDs eurer Forschenden ein:
+0000-0003-3808-5890
+0000-0003-1107-4403
+0000-0002-1905-9999
+0000-0003-0347-2989
+0000-0001-7099-4109
+0000-0002-9065-7457
+0000-0002-8643-3979

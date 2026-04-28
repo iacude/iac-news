@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IAC Publications News</title>
+  <link rel="stylesheet" href="./publications-widget.css">
+  <style>
+    body {
+      max-width: 1180px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .intro {
+      max-width: 760px;
+      margin-bottom: 2rem;
+      color: #4a5568;
+    }
+    code {
+      background: #f1f5f9;
+      padding: 0.1rem 0.25rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>IAC Publications News</h1>
+  <p class="intro">
+    Static GitHub Pages preview. The same widget can be embedded in Imperia by loading
+    <code>publications-widget.css</code>, setting the JSON URL, and loading <code>publications-widget.js</code>.
+  </p>
+
+  <div id="pub-news">Loading publications…</div>
+
+  <script>
+    window.PUBLICATIONS_WIDGET_CONFIG = {
+      dataUrl: "./data/publications.json",
+      containerId: "pub-news",
+      maxItems: 20,
+      featuredCount: 5,
+      locale: "en-US",
+      language: "en",
+      title: "Recent Publications"
+    };
+  </script>
+  <script src="./publications-widget.js" defer></script>
+</body>
+</html>
