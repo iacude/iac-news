@@ -1,5 +1,44 @@
 [
   {
+    "title": "Parasitic interactions modulate the physiological responses of Gammarus fossarum to the herbicide metazachlor",
+    "authors": "Nazmun Nahar, Anam Asghar, Torsten C. Schmidt, Bernd Sures",
+    "journal": "Ecotoxicology and Environmental Safety",
+    "abstract": "",
+    "abstract_source": "none",
+    "doi": "10.1016/j.ecoenv.2026.120199",
+    "url": "https://doi.org/10.1016/j.ecoenv.2026.120199",
+    "date": "2026-06",
+    "orcid": "0000-0003-1107-4403",
+    "put_code": 213622809,
+    "type": "journal-article"
+  },
+  {
+    "title": "Designing 3D-Printed TiO2/BiFeO3-Hybrid Materials for Enhanced Photocatalytic Degradation of Acyclovir via Visible Light",
+    "authors": "Roshanak Mohammadi Siahboomi, Stephane Kenmoe, Dick H. Douma, Michael S. Leupold, Abdoulmajid Eslami, Kateryna Loza, Ulrich Hagemann, Markus Heidelmann, Oleg Prymak, Torsten C. Schmidt, Michael Giese",
+    "journal": "ACS Applied Materials & Interfaces",
+    "abstract": "",
+    "abstract_source": "none",
+    "doi": "10.1021/acsami.5c22332",
+    "url": "https://doi.org/10.1021/acsami.5c22332",
+    "date": "2026-05-07",
+    "orcid": "0000-0003-1107-4403",
+    "put_code": 213987650,
+    "type": "journal-article"
+  },
+  {
+    "title": "Development of a Photocatalytic Membrane Screening Reactor (PMSR) for Standardized Evaluation of Immobilized Photocatalytic Support Materials",
+    "authors": "Michael S. Leupold, Anam Asghar, Klaus Kerpen, Lukas Fischer, Torsten C. Schmidt",
+    "journal": "MethodsX",
+    "abstract": "",
+    "abstract_source": "none",
+    "doi": "10.1016/j.mex.2026.103938",
+    "url": "https://doi.org/10.1016/j.mex.2026.103938",
+    "date": "2026-05",
+    "orcid": "0000-0001-7099-4109",
+    "put_code": 213542942,
+    "type": "journal-article"
+  },
+  {
     "title": "Automated, downscaled QuEChERS-based sample preparation with performic acid epoxidation for GC–MS/MS analysis of twelve phthalates in edible oils",
     "authors": "Malte Hübschen, Torsten C. Schmidt",
     "journal": "Advances in Sample Preparation",
