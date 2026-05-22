@@ -33,7 +33,7 @@
     "abstract_source": "europe_pmc",
     "doi": "10.1021/acsami.5c22332",
     "url": "https://doi.org/10.1021/acsami.5c22332",
-    "date": "2026-05-07",
+    "date": "2026-05-20",
     "orcid": "0000-0003-1107-4403",
     "put_code": 213987650,
     "type": "journal-article"
@@ -62,6 +62,19 @@
     "date": "2026-02",
     "orcid": "0000-0003-1107-4403",
     "put_code": 194739610,
+    "type": "journal-article"
+  },
+  {
+    "title": "Comparative assessment of feature and component profiling workflow for supercritical fluid chromatography – high resolution mass spectrometry analysis",
+    "authors": "Samuele Pellacani, Giorgio Tomasi, Gerrit Renner, Selina Tisler",
+    "journal": "Journal of Chromatography A",
+    "abstract": "Supercritical fluid chromatography coupled to high-resolution mass spectrometry (SFCHRMS) is gaining attention for non-target screening (NTS), yet systematic evaluations of data-processing workflows remain scarce. Here, we present the first comprehensive comparison between a component-profile (CP) approach based on Region of Interest analysis combined with Component Detection Algorithm and Multivariate Curve Resolution (ROI-CODA-MCR) and a feature-profile (FP) workflow, MS-DIAL. Using extracted ion chromatograms (EICs) as ground truth, both workflows were optimized and benchmarked for standard detection, peak intensity reliability, blank filtering performance, and suspect screening for wastewater samples. Both detected a comparable number of standards (33-35 out of 37) but ROI-derived intensities closely matched EICs (average ratio ≈1, RSD = 5.8%), while MS-DIAL intensities deviated substantially (up to two orders of magnitude, RSD >200%). In non-target analysis, MS-DIAL produced ≈1000 features with many false positives, while ROI-CODA-MCR yielded ≈200 components with lower blank contributions and superior resolution of in-source fragments and adducts. MS-DIAL detected more suspect compounds, highlighting a higher risk of false negatives in the CP approach, particularly for low-intensity or sparse signals. Our results demonstrate that SFCHRMS datasets, often including intense background signals, challenge key assumptions underlying both FP and CP workflows and necessitate careful parameter optimization.",
+    "abstract_source": "europe_pmc",
+    "doi": "10.1016/j.chroma.2026.466730",
+    "url": "http://dx.doi.org/10.1016/j.chroma.2026.466730",
+    "date": "2026-02",
+    "orcid": "0000-0003-3808-5890",
+    "put_code": 215230438,
     "type": "journal-article"
   },
   {
@@ -136,10 +149,10 @@
     "abstract": "",
     "abstract_source": "none",
     "doi": "10.1007/s00216-025-06093-7",
-    "url": "https://doi.org/10.1007/s00216-025-06093-7",
+    "url": "http://dx.doi.org/10.1007/s00216-025-06093-7",
     "date": "2025-11",
-    "orcid": "0000-0003-1107-4403",
-    "put_code": 191277205,
+    "orcid": "0000-0003-3808-5890;0000-0003-1107-4403",
+    "put_code": 215230358,
     "type": "journal-article"
   },
   {
@@ -227,10 +240,10 @@
     "abstract": "Non-Target Screening (NTS) is a valuable technique for exploring the chemical composition of aquatic systems. Although target screening has already been established in the quality control of water samples, adopting NTS, especially in data processing, requires further refinements. Herein, we introduce an approach to bring NTS closer to a practical application in routine wastewater monitoring. An in-house tool was developed, specifically designed for quick and efficient NTS data processing based on temporal analysis and spatial fingerprinting as prioritization techniques. This tool enables the creation of a fingerprint database for each emission source. It then uses this database to track the origin of each compound in downstream samples and conducts trend analysis if data from more downstream samples are available. As proof of concept, we successfully applied NTS and this tool to monitor a wastewater system in a chemical industrial park, aiming to routinely safeguard the wastewater treatment plant against potential threats. Specifically, compounds in the influent originating from particular plants were prioritized and their intensity profiles were monitored. Further substances with signal intensities increasing over time were also investigated, and possible transformation products were linked to their respective emission source. For these applications, a tedious structural elucidation of the individual compounds was not required since pattern and trend analyses were based on features. All in all, our NTS-based tool expanded the monitoring scope and demonstrated effectiveness and efficiency in routine wastewater management within the industrial park.",
     "abstract_source": "europe_pmc",
     "doi": "10.1016/j.jenvman.2025.125587",
-    "url": "https://doi.org/10.1016/j.jenvman.2025.125587",
+    "url": "http://dx.doi.org/10.1016/j.jenvman.2025.125587",
     "date": "2025-06",
-    "orcid": "0000-0003-1107-4403",
-    "put_code": 183460088,
+    "orcid": "0000-0003-3808-5890;0000-0003-1107-4403",
+    "put_code": 215230327,
     "type": "journal-article"
   },
   {
@@ -361,6 +374,19 @@
     "date": "2024-12",
     "orcid": "0000-0002-8643-3979",
     "put_code": 172836092,
+    "type": "journal-article"
+  },
+  {
+    "title": "Assessment of sample pre-treatment strategies to mitigate matrix effects for microplastics analysis using thermoanalytical techniques",
+    "authors": "Mike Wenzel, Gerrit Renner, Laura Pruin, Carmen Wolf, Christine Kube, Jürgen Schram, Torsten C. Schmidt, Jochen Tuerk",
+    "journal": "TrAC Trends in Analytical Chemistry",
+    "abstract": "",
+    "abstract_source": "none",
+    "doi": "10.1016/j.trac.2024.117997",
+    "url": "http://dx.doi.org/10.1016/j.trac.2024.117997",
+    "date": "2024-12",
+    "orcid": "0000-0003-3808-5890",
+    "put_code": 215230517,
     "type": "journal-article"
   },
   {
