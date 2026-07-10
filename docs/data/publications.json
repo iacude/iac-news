@@ -104,6 +104,19 @@
     "type": "journal-article"
   },
   {
+    "title": "From features to effects: non-target screening meets ecotoxicology in industrial wastewaters",
+    "authors": "Felix Drees, Janina Pytlik, Nazmun Nahar, Esther Smollich, Gerrit Renner, Bernd Sures, Torsten C. Schmidt",
+    "journal": "Environmental Science: Advances",
+    "abstract": "Integrating non-target screening, ecotoxicology, and machine learning identifies chemical patterns driving toxicity in industrial wastewater.",
+    "abstract_source": "crossref",
+    "doi": "10.1039/D6VA00270F",
+    "url": "https://doi.org/10.1039/D6VA00270F",
+    "date": "2026",
+    "orcid": "0000-0003-1107-4403",
+    "put_code": 220070837,
+    "type": "journal-article"
+  },
+  {
     "title": "Coexistence of methanogenesis and sulfate reduction in a sulfate-adapted enrichment culture from an oil reservoir",
     "authors": "Sebastian Beilig, Lisa Voskuhl, Itır Geydirici, Lucie K. Tintrop, Torsten C. Schmidt, Rainer U. Meckenstock, Martha Vives",
     "journal": "Applied and Environmental Microbiology",
@@ -120,8 +133,8 @@
     "title": "Performance evaluation of novel Ca/Mn-doped perovskite as a multifunctional material in chemical looping reverse water gas shift process for low-carbon fuels",
     "authors": "Adnan Akhtar, Adam Zaidi, Christopher de Leeuwe, Angelos M. Efstathiou, Anam Asghar, Mohamed G. Hassan-Sayed, Syed Zaheer Abbas",
     "journal": "Journal of Environmental Chemical Engineering",
-    "abstract": "",
-    "abstract_source": "none",
+    "abstract": "The chemical looping reverse water gas shift (CL-RWGS) catalytic process offers a promising approach for decarbonizing energy-intensive industries. The CL-RWGS promotes the formation of surface oxygen vacancies in the material, which are subsequently replenished by extracting oxygen from CO 2 , resulting in syngas production. However, there remains a significant gap in the development of materials that not only exhibit redox activity but also enable in-situ carbonation, offering dual functionality for enhanced CO 2 utilization. This study introduces a novel calcium-and manganese-doped LaNiO 3 perovskite, designed for integrated CO 2 sorption and in-situ utilization during CL – RWGS process. Comprehensive characterization confirmed the material ’ s crystalline structure, porosity, and successful incorporation of Ca and Mn dopants. Thermogravimetric analysis (TGA) across 700 – 900 ◦ C revealed a peak oxygen storage capacity of 1.97 mmol O 2 /g and demonstrated excellent redox stability, with less than 1 % performance loss over 17 cycles. RWGS experiments conducted in a packed bed reactor demonstrated up to 57 % CO 2 to CO conversion at 900 ◦ C, approaching the thermodynamic equilibrium value of 60 % under the same operating conditions. Moreover, an H 2 /CO molar ratio of ~2.0, suitable for Fischer-Tropsch synthesis, was achieved at 600 ◦ C and 1.0 bar with a feed H 2 /CO 2 molar ratio of 1.0, attributed to CO 2 chem-isorption via a carbonation-driven mechanism facilitated by the presence of CaO phase. These results suggest that the calcium-and manganese-doped LaNiO 3 perovskite is a highly promising multi-functional material for chemical looping-based CO 2 utilization technologies.",
+    "abstract_source": "semantic_scholar",
     "doi": "10.1016/j.jece.2025.119640",
     "url": "https://doi.org/10.1016/j.jece.2025.119640",
     "date": "2025-12",
