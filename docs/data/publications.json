@@ -13,19 +13,6 @@
     "type": "journal-article"
   },
   {
-    "title": "Integrated one-pot extraction & derivatization of fatty acids in complex food matrices using a thermomorphic solvent system",
-    "authors": "Kaliyani Wickneswaran, David Köhler, Fatemeh Afzalnia, Gerrit Renner, Torsten C. Schmidt",
-    "journal": "Advances in Sample Preparation",
-    "abstract": "",
-    "abstract_source": "none",
-    "doi": "10.1016/j.sampre.2026.100244",
-    "url": "https://doi.org/10.1016/j.sampre.2026.100244",
-    "date": "2026-08",
-    "orcid": "0000-0003-1107-4403",
-    "put_code": 222222412,
-    "type": "journal-article"
-  },
-  {
     "title": "Parasitic interactions modulate the physiological responses of Gammarus fossarum to the herbicide metazachlor",
     "authors": "Nazmun Nahar, Anam Asghar, Torsten C. Schmidt, Bernd Sures",
     "journal": "Ecotoxicology and Environmental Safety",
@@ -91,19 +78,6 @@
     "type": "journal-article"
   },
   {
-    "title": "Comparative assessment of feature and component profiling workflow for supercritical fluid chromatography – high resolution mass spectrometry analysis",
-    "authors": "Samuele Pellacani, Giorgio Tomasi, Gerrit Renner, Selina Tisler",
-    "journal": "Journal of Chromatography A",
-    "abstract": "Supercritical fluid chromatography coupled to high-resolution mass spectrometry (SFCHRMS) is gaining attention for non-target screening (NTS), yet systematic evaluations of data-processing workflows remain scarce. Here, we present the first comprehensive comparison between a component-profile (CP) approach based on Region of Interest analysis combined with Component Detection Algorithm and Multivariate Curve Resolution (ROI-CODA-MCR) and a feature-profile (FP) workflow, MS-DIAL. Using extracted ion chromatograms (EICs) as ground truth, both workflows were optimized and benchmarked for standard detection, peak intensity reliability, blank filtering performance, and suspect screening for wastewater samples. Both detected a comparable number of standards (33-35 out of 37) but ROI-derived intensities closely matched EICs (average ratio ≈1, RSD = 5.8%), while MS-DIAL intensities deviated substantially (up to two orders of magnitude, RSD >200%). In non-target analysis, MS-DIAL produced ≈1000 features with many false positives, while ROI-CODA-MCR yielded ≈200 components with lower blank contributions and superior resolution of in-source fragments and adducts. MS-DIAL detected more suspect compounds, highlighting a higher risk of false negatives in the CP approach, particularly for low-intensity or sparse signals. Our results demonstrate that SFCHRMS datasets, often including intense background signals, challenge key assumptions underlying both FP and CP workflows and necessitate careful parameter optimization.",
-    "abstract_source": "europe_pmc",
-    "doi": "10.1016/j.chroma.2026.466730",
-    "url": "http://dx.doi.org/10.1016/j.chroma.2026.466730",
-    "date": "2026-02",
-    "orcid": "0000-0003-3808-5890",
-    "put_code": 215230438,
-    "type": "journal-article"
-  },
-  {
     "title": "Temperature-Responsive Liquid Chromatography for One- and Two-Dimensional Separations in Compound-Specific Isotope Analysis",
     "authors": "Sarah P. Rockel, Adriaan Ampe, Matthias Stüwe, Thomas Piper, Maik A. Jochmann, Frédéric Lynen, Torsten C. Schmidt",
     "journal": "Analytical Chemistry",
@@ -130,16 +104,55 @@
     "type": "journal-article"
   },
   {
+    "title": "Integrated one-pot extraction & derivatization of fatty acids in complex food matrices using a thermomorphic solvent system",
+    "authors": "",
+    "journal": "ADVANCES IN SAMPLE PREPARATION",
+    "abstract": "",
+    "abstract_source": "none",
+    "doi": "10.1016/J.SAMPRE.2026.100244",
+    "url": "https://doi.org/10.1016/J.SAMPRE.2026.100244",
+    "date": "2026",
+    "orcid": "0000-0003-3808-5890;0000-0003-1107-4403",
+    "put_code": 227790883,
+    "type": "journal-article"
+  },
+  {
     "title": "From features to effects: non-target screening meets ecotoxicology in industrial wastewaters",
-    "authors": "Felix Drees, Janina Pytlik, Nazmun Nahar, Esther Smollich, Gerrit Renner, Bernd Sures, Torsten C. Schmidt",
-    "journal": "Environmental Science: Advances",
+    "authors": "",
+    "journal": "ENVIRONMENTAL SCIENCE-ADVANCES",
     "abstract": "Integrating non-target screening, ecotoxicology, and machine learning identifies chemical patterns driving toxicity in industrial wastewater.",
     "abstract_source": "crossref",
     "doi": "10.1039/D6VA00270F",
     "url": "https://doi.org/10.1039/D6VA00270F",
     "date": "2026",
-    "orcid": "0000-0003-1107-4403",
-    "put_code": 220070837,
+    "orcid": "0000-0003-3808-5890;0000-0003-1107-4403",
+    "put_code": 227790885,
+    "type": "journal-article"
+  },
+  {
+    "title": "Comparative non-target screening of advanced oxidation process (AOP)-integrated industrial wastewater treatment using RP and mixed-mode chromatography",
+    "authors": "",
+    "journal": "ANALYTICAL AND BIOANALYTICAL CHEMISTRY",
+    "abstract": "Advanced oxidation is increasingly integrated into industrial wastewater treatment to address complex, variable contaminant loads. Here, LC-HRMS non-target screening (NTS) was used to characterize an industrial WWTP incorporating a one-stage advanced oxidation process (AOP) and to compare reversed-phase (RP) and mixed-mode (MM) chromatography for expanding the accessible polarity window. Both methods delivered consistently high data quality, enabling robust feature-level comparisons. Cliff's δ and polarity descriptors indicated differences in feature distributions, while tentative matching to the NORMAN Substance Database suggested substantial overlap between RP and MM and pointed to potential database bias toward less polar compounds. Multivariate analyses captured treatment-driven chemical patterns: PCA separated AOP-treated samples most clearly with MM, consistent with enhanced sensitivity to polar transformation products, whereas RP more strongly differentiated influent from effluent, reflecting predominantly hydrophobic signals. PLS-DA confirmed these trends and enabled robust classification of sample types. Volcano analyses highlighted statistically significant increases, decreases, and persistent signals, showing that while biological treatment removed most components, a subset of AOP-derived features persisted into the final effluent. Overall, broadening the chromatographic window improves NTS-based process assessment and supports targeted optimization of treatment steps for problematic compounds.",
+    "abstract_source": "europe_pmc",
+    "doi": "10.1007/S00216-026-06691-Z",
+    "url": "https://doi.org/10.1007/S00216-026-06691-Z",
+    "date": "2026",
+    "orcid": "0000-0003-3808-5890",
+    "put_code": 227790884,
+    "type": "journal-article"
+  },
+  {
+    "title": "Comparative assessment of feature and component profiling workflow for supercritical fluid chromatography - high resolution mass spectrometry analysis",
+    "authors": "",
+    "journal": "JOURNAL OF CHROMATOGRAPHY A",
+    "abstract": "Supercritical fluid chromatography coupled to high-resolution mass spectrometry (SFCHRMS) is gaining attention for non-target screening (NTS), yet systematic evaluations of data-processing workflows remain scarce. Here, we present the first comprehensive comparison between a component-profile (CP) approach based on Region of Interest analysis combined with Component Detection Algorithm and Multivariate Curve Resolution (ROI-CODA-MCR) and a feature-profile (FP) workflow, MS-DIAL. Using extracted ion chromatograms (EICs) as ground truth, both workflows were optimized and benchmarked for standard detection, peak intensity reliability, blank filtering performance, and suspect screening for wastewater samples. Both detected a comparable number of standards (33-35 out of 37) but ROI-derived intensities closely matched EICs (average ratio ≈1, RSD = 5.8%), while MS-DIAL intensities deviated substantially (up to two orders of magnitude, RSD >200%). In non-target analysis, MS-DIAL produced ≈1000 features with many false positives, while ROI-CODA-MCR yielded ≈200 components with lower blank contributions and superior resolution of in-source fragments and adducts. MS-DIAL detected more suspect compounds, highlighting a higher risk of false negatives in the CP approach, particularly for low-intensity or sparse signals. Our results demonstrate that SFCHRMS datasets, often including intense background signals, challenge key assumptions underlying both FP and CP workflows and necessitate careful parameter optimization.",
+    "abstract_source": "europe_pmc",
+    "doi": "10.1016/J.CHROMA.2026.466730",
+    "url": "https://doi.org/10.1016/J.CHROMA.2026.466730",
+    "date": "2026",
+    "orcid": "0000-0003-3808-5890",
+    "put_code": 227790886,
     "type": "journal-article"
   },
   {
@@ -166,32 +179,6 @@
     "date": "2025-12",
     "orcid": "0000-0001-7099-4109",
     "put_code": 193525169,
-    "type": "journal-article"
-  },
-  {
-    "title": "Modular annular photocatalytic membrane reactor for the degradation of micropollutants: Design and application",
-    "authors": "Michael S. Leupold, Max Reuschenbach, Gerrit Renner, Anam Asghar, Klaus Kerpen, Lukas Fischer, Torsten C. Schmidt",
-    "journal": "MethodsX",
-    "abstract": "This study presents the Modular Annular Photocatalytic Membrane Reactor (MAPMR), designed to address key challenges in conventional photocatalytic reactors, such as uniform light distribution, efficient photocatalyst recovery, and a precise control over reaction conditions. The MAPMR features:1)A modular, annular configuration with vertically stacked photocatalyst-immobilized membranes surrounding the light source, ensuring uniform light distribution.2)Continuous separation and recovery of photocatalysts, while providing precise control over parameters such as reaction time, temperature, and light intensity.3)Use of UV-cut filters to block light wavelength below specific thresholds.The reactor was tested with TiO₂-decorated polyethersulfone (PES) membranes (TiO₂-PES) and equipped with selective UV cut-off filters to selectively assess individual micropollutant degradation processes. These filters block wavelengths below 296 nm, 325 nm, and 405 nm, facilitating separate studies of UV- and visible light-driven photocatalysis while preventing direct photolysis. The reactor's modular design facilitates easy membrane replacement, supports diverse operational modes, and integrates in-line and on-line monitoring for real-time analytical insights. Amoxicillin (AMX), a model organic pollutant, was used as the probe compound to evaluate reactor performance with potassium nitrate as a UV cut-off filter (λ < 325 nm) providing precise evaluation of both photocatalytic and photolytic AMX degradation.",
-    "abstract_source": "europe_pmc",
-    "doi": "10.1016/j.mex.2025.103478",
-    "url": "https://doi.org/10.1016/j.mex.2025.103478",
-    "date": "2025-12",
-    "orcid": "0000-0001-7099-4109",
-    "put_code": 187112573,
-    "type": "journal-article"
-  },
-  {
-    "title": "Computational mass spectrometry for exposomics in non‑target screening",
-    "authors": "Torsten C. Schmidt, Gerrit Renner, Saer Samanipour",
-    "journal": "Analytical and Bioanalytical Chemistry",
-    "abstract": "",
-    "abstract_source": "none",
-    "doi": "10.1007/s00216-025-06093-7",
-    "url": "http://dx.doi.org/10.1007/s00216-025-06093-7",
-    "date": "2025-11",
-    "orcid": "0000-0003-3808-5890;0000-0003-1107-4403",
-    "put_code": 215230358,
     "type": "journal-article"
   },
   {
@@ -270,19 +257,6 @@
     "date": "2025-06-10",
     "orcid": "0000-0003-1107-4403",
     "put_code": 184965181,
-    "type": "journal-article"
-  },
-  {
-    "title": "Development of a tool to routinely monitor wastewater systems via non-target screening utilizing spatial fingerprinting and temporal trend analysis as prioritization techniques",
-    "authors": "Reyhaneh Armin, Gerrit Renner, Markus Weber, Torsten C. Schmidt",
-    "journal": "Journal of Environmental Management",
-    "abstract": "Non-Target Screening (NTS) is a valuable technique for exploring the chemical composition of aquatic systems. Although target screening has already been established in the quality control of water samples, adopting NTS, especially in data processing, requires further refinements. Herein, we introduce an approach to bring NTS closer to a practical application in routine wastewater monitoring. An in-house tool was developed, specifically designed for quick and efficient NTS data processing based on temporal analysis and spatial fingerprinting as prioritization techniques. This tool enables the creation of a fingerprint database for each emission source. It then uses this database to track the origin of each compound in downstream samples and conducts trend analysis if data from more downstream samples are available. As proof of concept, we successfully applied NTS and this tool to monitor a wastewater system in a chemical industrial park, aiming to routinely safeguard the wastewater treatment plant against potential threats. Specifically, compounds in the influent originating from particular plants were prioritized and their intensity profiles were monitored. Further substances with signal intensities increasing over time were also investigated, and possible transformation products were linked to their respective emission source. For these applications, a tedious structural elucidation of the individual compounds was not required since pattern and trend analyses were based on features. All in all, our NTS-based tool expanded the monitoring scope and demonstrated effectiveness and efficiency in routine wastewater management within the industrial park.",
-    "abstract_source": "europe_pmc",
-    "doi": "10.1016/j.jenvman.2025.125587",
-    "url": "http://dx.doi.org/10.1016/j.jenvman.2025.125587",
-    "date": "2025-06",
-    "orcid": "0000-0003-3808-5890;0000-0003-1107-4403",
-    "put_code": 215230327,
     "type": "journal-article"
   },
   {
@@ -377,6 +351,45 @@
     "type": "journal-article"
   },
   {
+    "title": "Modular annular photocatalytic membrane reactor for the degradation of micropollutants: Design and application",
+    "authors": "",
+    "journal": "METHODSX",
+    "abstract": "This study presents the Modular Annular Photocatalytic Membrane Reactor (MAPMR), designed to address key challenges in conventional photocatalytic reactors, such as uniform light distribution, efficient photocatalyst recovery, and a precise control over reaction conditions. The MAPMR features:1)A modular, annular configuration with vertically stacked photocatalyst-immobilized membranes surrounding the light source, ensuring uniform light distribution.2)Continuous separation and recovery of photocatalysts, while providing precise control over parameters such as reaction time, temperature, and light intensity.3)Use of UV-cut filters to block light wavelength below specific thresholds.The reactor was tested with TiO₂-decorated polyethersulfone (PES) membranes (TiO₂-PES) and equipped with selective UV cut-off filters to selectively assess individual micropollutant degradation processes. These filters block wavelengths below 296 nm, 325 nm, and 405 nm, facilitating separate studies of UV- and visible light-driven photocatalysis while preventing direct photolysis. The reactor's modular design facilitates easy membrane replacement, supports diverse operational modes, and integrates in-line and on-line monitoring for real-time analytical insights. Amoxicillin (AMX), a model organic pollutant, was used as the probe compound to evaluate reactor performance with potassium nitrate as a UV cut-off filter (λ < 325 nm) providing precise evaluation of both photocatalytic and photolytic AMX degradation.",
+    "abstract_source": "europe_pmc",
+    "doi": "10.1016/J.MEX.2025.103478",
+    "url": "https://doi.org/10.1016/J.MEX.2025.103478",
+    "date": "2025",
+    "orcid": "0000-0003-3808-5890;0000-0001-7099-4109",
+    "put_code": 227790890,
+    "type": "journal-article"
+  },
+  {
+    "title": "Microplastics and phthalate esters in yogurt and buttermilk samples: characterization and health risk assessment",
+    "authors": "",
+    "journal": "JOURNAL OF ENVIRONMENTAL HEALTH SCIENCE AND ENGINEERING",
+    "abstract": "The contamination of yogurt and buttermilk (doogh), two widely consumed dairy products, with microplastics (MPs) and phthalic acid esters (PAEs), and subsequently the health effects caused by the contamination of these products on humans, is a potential concern. In this study, the abundance and characteristics of MPs as well as the PAEs concentration in different types of yogurts and buttermilk available in the Iranian market were investigated. The average abundance of MPs in different types of yogurts and buttermilk was between 0.63 and 0.76 and 0.52-0.7 items/mL, respectively. Most detected MPs in yogurt and buttermilk samples were in the size range of 1000-5000 μm with the predominant color and shape of transparent and fiber, respectively. Polyethylene terephthalate (PET) and polyamide (PA) were the dominant polymers in yogurt and buttermilk samples, respectively. The average concentrations of PAEs in different types of yogurt and buttermilk samples were between 5.79 and 11.36 and 1.46-6.93 µg/L, respectively. The findings showed that Di(2-ethylhexyl) phthalate (DEHP) levels in yogurt and buttermilk samples may have a carcinogenic risk for adults and adolescents. According to the results of this study, the intake of MPs and PAEs through high consumption of yogurt and buttermilk should be recognized as a significant source of MPs in the human body. Supplementary information The online version contains supplementary material available at 10.1007/s40201-025-00939-z.",
+    "abstract_source": "europe_pmc",
+    "doi": "10.1007/S40201-025-00939-Z",
+    "url": "https://doi.org/10.1007/S40201-025-00939-Z",
+    "date": "2025",
+    "orcid": "0000-0003-3808-5890",
+    "put_code": 227790892,
+    "type": "journal-article"
+  },
+  {
+    "title": "Examining the impact of video production quality and presenter identity in science communication on knowledge acquisition and attitude change",
+    "authors": "",
+    "journal": "INTERNATIONAL JOURNAL OF SCIENCE EDUCATION PART B-COMMUNICATION AND PUBLIC ENGAGEMENT",
+    "abstract": "",
+    "abstract_source": "none",
+    "doi": "10.1080/21548455.2024.2414358",
+    "url": "https://doi.org/10.1080/21548455.2024.2414358",
+    "date": "2025",
+    "orcid": "0000-0003-3808-5890",
+    "put_code": 227790893,
+    "type": "journal-article"
+  },
+  {
     "title": "Enhanced degradation of cyclic ketone and its diamine derivative using ozone/peroxymonosulfate (O₃/PMS) process",
     "authors": "Asghar, A., Eßer, W., Hofrath, A.S., Schmidt, T.C.",
     "journal": "Journal of Water Process Engineering",
@@ -387,6 +400,58 @@
     "date": "2025",
     "orcid": "0000-0001-7099-4109",
     "put_code": 191682216,
+    "type": "journal-article"
+  },
+  {
+    "title": "Development of a tool to routinely monitor wastewater systems via non-target screening utilizing spatial fingerprinting and temporal trend analysis as prioritization techniques",
+    "authors": "",
+    "journal": "JOURNAL OF ENVIRONMENTAL MANAGEMENT",
+    "abstract": "Non-Target Screening (NTS) is a valuable technique for exploring the chemical composition of aquatic systems. Although target screening has already been established in the quality control of water samples, adopting NTS, especially in data processing, requires further refinements. Herein, we introduce an approach to bring NTS closer to a practical application in routine wastewater monitoring. An in-house tool was developed, specifically designed for quick and efficient NTS data processing based on temporal analysis and spatial fingerprinting as prioritization techniques. This tool enables the creation of a fingerprint database for each emission source. It then uses this database to track the origin of each compound in downstream samples and conducts trend analysis if data from more downstream samples are available. As proof of concept, we successfully applied NTS and this tool to monitor a wastewater system in a chemical industrial park, aiming to routinely safeguard the wastewater treatment plant against potential threats. Specifically, compounds in the influent originating from particular plants were prioritized and their intensity profiles were monitored. Further substances with signal intensities increasing over time were also investigated, and possible transformation products were linked to their respective emission source. For these applications, a tedious structural elucidation of the individual compounds was not required since pattern and trend analyses were based on features. All in all, our NTS-based tool expanded the monitoring scope and demonstrated effectiveness and efficiency in routine wastewater management within the industrial park.",
+    "abstract_source": "europe_pmc",
+    "doi": "10.1016/J.JENVMAN.2025.125587",
+    "url": "https://doi.org/10.1016/J.JENVMAN.2025.125587",
+    "date": "2025",
+    "orcid": "0000-0003-3808-5890;0000-0003-1107-4403",
+    "put_code": 227790891,
+    "type": "journal-article"
+  },
+  {
+    "title": "Computational mass spectrometry for exposomics in non-target screening",
+    "authors": "",
+    "journal": "ANALYTICAL AND BIOANALYTICAL CHEMISTRY",
+    "abstract": "",
+    "abstract_source": "none",
+    "doi": "10.1007/S00216-025-06093-7",
+    "url": "https://doi.org/10.1007/S00216-025-06093-7",
+    "date": "2025",
+    "orcid": "0000-0003-3808-5890;0000-0003-1107-4403",
+    "put_code": 227790889,
+    "type": "journal-article"
+  },
+  {
+    "title": "Cigarette filters as a major source of microfibers in aquatic environments",
+    "authors": "",
+    "journal": "SCIENTIFIC REPORTS",
+    "abstract": "Cigarette butts (CBs) are known as one of the most prevalent forms of environmental waste, needing global attention to mitigate their detrimental health and ecological impacts. Owing to their filter composition, discarded CBs can persistently release microfibers (MFs) into the environment. In this research, the levels, characteristics, and ecological risks associated with MFs released from cigarette filters (CFs) into water (distilled and seawater) were investigated under various environmental conditions (laboratory and outdoor environments). The assessment focused on short-term exposure durations of 1, 2, 7, 15, 30, and 60 days, forming the initial phase of this research. The mean level of released MFs ranged from 5.78 to 92.43 items/g CFs. The results highlighted that more MFs were released from CFs into the seawater and outdoor environment at a contact time of 60 days. The predominant size and color of the released MFs were 20-50 μm and white/transparent, respectively. The main detected polymer composition of MFs was cellulose acetate. The computed pollution load index (PLI) values were > 30, indicating severe pollution. Additionally, the risk quotient (RQ) values were greater than 1, indicating a potential threat to the water environment. Based on mean levels of released MFs through CFs during contact times of 1 to 60 days and the amount of discarded CFs yearly on a global scale, CFs may release 14 × 10 12 to 51 × 10 12 MFs into the aquatic environments. The results of present research allow scientific society to better comprehend the CFs' role in transporting MFs in the aquatic systems as well as their potential environmental risks.",
+    "abstract_source": "europe_pmc",
+    "doi": "10.1038/S41598-025-20771-7",
+    "url": "https://doi.org/10.1038/S41598-025-20771-7",
+    "date": "2025",
+    "orcid": "0000-0003-3808-5890",
+    "put_code": 227790887,
+    "type": "journal-article"
+  },
+  {
+    "title": "A review of occurrence and concentrations of cellulose acetate and other artificial cellulose microfibers in aquatic environmental matrices: an indicator of cigarette butts' contamination?",
+    "authors": "",
+    "journal": "JOURNAL OF HAZARDOUS MATERIALS ADVANCES",
+    "abstract": "",
+    "abstract_source": "none",
+    "doi": "10.1016/J.HAZADV.2025.100786",
+    "url": "https://doi.org/10.1016/J.HAZADV.2025.100786",
+    "date": "2025",
+    "orcid": "0000-0003-3808-5890",
+    "put_code": 227790888,
     "type": "journal-article"
   },
   {
@@ -413,19 +478,6 @@
     "date": "2024-12",
     "orcid": "0000-0002-8643-3979",
     "put_code": 172836092,
-    "type": "journal-article"
-  },
-  {
-    "title": "Assessment of sample pre-treatment strategies to mitigate matrix effects for microplastics analysis using thermoanalytical techniques",
-    "authors": "Mike Wenzel, Gerrit Renner, Laura Pruin, Carmen Wolf, Christine Kube, Jürgen Schram, Torsten C. Schmidt, Jochen Tuerk",
-    "journal": "TrAC Trends in Analytical Chemistry",
-    "abstract": "",
-    "abstract_source": "none",
-    "doi": "10.1016/j.trac.2024.117997",
-    "url": "http://dx.doi.org/10.1016/j.trac.2024.117997",
-    "date": "2024-12",
-    "orcid": "0000-0003-3808-5890",
-    "put_code": 215230517,
     "type": "journal-article"
   },
   {
@@ -481,19 +533,6 @@
     "type": "preprint"
   },
   {
-    "title": "qPeaks: A Linear Regression-Based Asymmetric Peak Model for Parameter-Free Automatized Detection and Characterization of Chromatographic Peaks in Non-Target Screening Data",
-    "authors": "Max Reuschenbach, Felix Drees, Michael S. Leupold, Lucie K. Tintrop, Torsten C. Schmidt, Gerrit Renner",
-    "journal": "Analytical Chemistry",
-    "abstract": "We present qPeaks (quality peaks), a novel, user-parameter-free algorithm for peak detection and peak characterization applicable to chromatographic data. The algorithm is based on a linearizable regression model that analyzes asymmetric peaks and estimates the specific uncertainties associated with the peak regression parameters. The uncertainties of the parameters are used to derive a data quality score DQS peak , rendering low reliability results more transparent during processing and allowing for the prioritization of generated features. High DQS peak chromatographic peaks have a lower chance of being classified as false-positive and show higher repeatability over multiple measurements. The high efficiency of the algorithm makes it particularly useful for application within processing routines of nontarget screening through chromatography coupled with high-resolution mass spectrometry. qPeaks is integrated into the qAlgorithms nontarget screening processing toolbox and appends a parameter-free chromatographic peak detection and characterization step to it. With qAlgorithms, now high-resolution mass spectra are centroided using the qCentroids algorithms, centroids are clustered to form extracted ion chromatograms (EICs) with the qBinning algorithm, and chromatographic peaks are found on the generated EICs with qPeaks. However, all tools from qAlgorithms can also be used independently.",
-    "abstract_source": "europe_pmc",
-    "doi": "10.1021/acs.analchem.4c00494",
-    "url": "http://dx.doi.org/10.1021/acs.analchem.4c00494",
-    "date": "2024-05-07",
-    "orcid": "0000-0003-3808-5890;0000-0003-1107-4403",
-    "put_code": 166267886,
-    "type": "journal-article"
-  },
-  {
     "title": "A review of endocrine disrupting chemicals migration from food contact materials into beverages",
     "authors": "Fariba Abbasi, Gabriel E. De-la-Torre, Mohammad Reza KalantarHormozi, Torsten C. Schmidt, Sina Dobaradaran",
     "journal": "Chemosphere",
@@ -517,19 +556,6 @@
     "date": "2024-04-23",
     "orcid": "0000-0003-1107-4403",
     "put_code": 157460381,
-    "type": "journal-article"
-  },
-  {
-    "title": "Non-target screening in water analysis: recent trends of data evaluation, quality assurance, and their future perspectives",
-    "authors": "Maryam Vosough, Torsten C. Schmidt, Gerrit Renner",
-    "journal": "Analytical and Bioanalytical Chemistry",
-    "abstract": "This trend article provides an overview of recent advancements in Non-Target Screening (NTS) for water quality assessment, focusing on new methods in data evaluation, qualification, quantification, and quality assurance (QA/QC). It highlights the evolution in NTS data processing, where open-source platforms address challenges in result comparability and data complexity. Advanced chemometrics and machine learning (ML) are pivotal for trend identification and correlation analysis, with a growing emphasis on automated workflows and robust classification models. The article also discusses the rigorous QA/QC measures essential in NTS, such as internal standards, batch effect monitoring, and matrix effect assessment. It examines the progress in quantitative NTS (qNTS), noting advancements in ionization efficiency-based quantification and predictive modeling despite challenges in sample variability and analytical standards. Selected studies illustrate NTS’s role in water analysis, combining high-resolution mass spectrometry with chromatographic techniques for enhanced chemical exposure assessment. The article addresses chemical identification and prioritization challenges, highlighting the integration of database searches and computational tools for efficiency. Finally, the article outlines the future research needs in NTS, including establishing comprehensive guidelines, improving QA/QC measures, and reporting results. It underscores the potential to integrate multivariate chemometrics, AI/ML tools, and multi-way methods into NTS workflows and combine various data sources to understand ecosystem health and protection comprehensively.",
-    "abstract_source": "orcid",
-    "doi": "10.1007/s00216-024-05153-8",
-    "url": "http://dx.doi.org/10.1007/s00216-024-05153-8",
-    "date": "2024-04",
-    "orcid": "0000-0003-3808-5890",
-    "put_code": 166267912,
     "type": "journal-article"
   },
   {
@@ -611,6 +637,19 @@
     "type": "journal-article"
   },
   {
+    "title": "qPeaks: A Linear Regression-Based Asymmetric Peak Model for Parameter-Free Automatized Detection and Characterization of Chromatographic Peaks in Non-Target Screening Data",
+    "authors": "",
+    "journal": "ANALYTICAL CHEMISTRY",
+    "abstract": "We present qPeaks (quality peaks), a novel, user-parameter-free algorithm for peak detection and peak characterization applicable to chromatographic data. The algorithm is based on a linearizable regression model that analyzes asymmetric peaks and estimates the specific uncertainties associated with the peak regression parameters. The uncertainties of the parameters are used to derive a data quality score DQS peak , rendering low reliability results more transparent during processing and allowing for the prioritization of generated features. High DQS peak chromatographic peaks have a lower chance of being classified as false-positive and show higher repeatability over multiple measurements. The high efficiency of the algorithm makes it particularly useful for application within processing routines of nontarget screening through chromatography coupled with high-resolution mass spectrometry. qPeaks is integrated into the qAlgorithms nontarget screening processing toolbox and appends a parameter-free chromatographic peak detection and characterization step to it. With qAlgorithms, now high-resolution mass spectra are centroided using the qCentroids algorithms, centroids are clustered to form extracted ion chromatograms (EICs) with the qBinning algorithm, and chromatographic peaks are found on the generated EICs with qPeaks. However, all tools from qAlgorithms can also be used independently.",
+    "abstract_source": "europe_pmc",
+    "doi": "10.1021/ACS.ANALCHEM.4C00494",
+    "url": "https://doi.org/10.1021/ACS.ANALCHEM.4C00494",
+    "date": "2024",
+    "orcid": "0000-0003-3808-5890;0000-0003-1107-4403",
+    "put_code": 227790895,
+    "type": "journal-article"
+  },
+  {
     "title": "Polyacrylic acid functionalized superparamagnetic iron-oxide supraparticles for highly efficient adsorption and removal of contaminants from water",
     "authors": "Hammad, M., Amin, A., Asghar, A., Anwar, O., Salamon, S., Landers, J., Kräenbring, M.-A., Jain, A., Hardt, S., Wiggers, H., Schmidt, T.C., Wende, H., Schulz, C., Segets, D.",
     "journal": "Journal of Water Process Engineering",
@@ -621,6 +660,32 @@
     "date": "2024",
     "orcid": "0000-0001-7099-4109",
     "put_code": 191682219,
+    "type": "journal-article"
+  },
+  {
+    "title": "Non-target screening in water analysis: recent trends of data evaluation, quality assurance, and their future perspectives",
+    "authors": "",
+    "journal": "ANALYTICAL AND BIOANALYTICAL CHEMISTRY",
+    "abstract": "This trend article provides an overview of recent advancements in Non-Target Screening (NTS) for water quality assessment, focusing on new methods in data evaluation, qualification, quantification, and quality assurance (QA/QC). It highlights the evolution in NTS data processing, where open-source platforms address challenges in result comparability and data complexity. Advanced chemometrics and machine learning (ML) are pivotal for trend identification and correlation analysis, with a growing emphasis on automated workflows and robust classification models. The article also discusses the rigorous QA/QC measures essential in NTS, such as internal standards, batch effect monitoring, and matrix effect assessment. It examines the progress in quantitative NTS (qNTS), noting advancements in ionization efficiency-based quantification and predictive modeling despite challenges in sample variability and analytical standards. Selected studies illustrate NTS’s role in water analysis, combining high-resolution mass spectrometry with chromatographic techniques for enhanced chemical exposure assessment. The article addresses chemical identification and prioritization challenges, highlighting the integration of database searches and computational tools for efficiency. Finally, the article outlines the future research needs in NTS, including establishing comprehensive guidelines, improving QA/QC measures, and reporting results. It underscores the potential to integrate multivariate chemometrics, AI/ML tools, and multi-way methods into NTS workflows and combine various data sources to understand ecosystem health and protection comprehensively.",
+    "abstract_source": "crossref",
+    "doi": "10.1007/S00216-024-05153-8",
+    "url": "https://doi.org/10.1007/S00216-024-05153-8",
+    "date": "2024",
+    "orcid": "0000-0003-3808-5890",
+    "put_code": 227790896,
+    "type": "journal-article"
+  },
+  {
+    "title": "Assessment of sample pre-treatment strategies to mitigate matrix effects for microplastics analysis using thermoanalytical techniques",
+    "authors": "",
+    "journal": "TRAC-TRENDS IN ANALYTICAL CHEMISTRY",
+    "abstract": "",
+    "abstract_source": "none",
+    "doi": "10.1016/J.TRAC.2024.117997",
+    "url": "https://doi.org/10.1016/J.TRAC.2024.117997",
+    "date": "2024",
+    "orcid": "0000-0003-3808-5890",
+    "put_code": 227790894,
     "type": "journal-article"
   }
 ]
