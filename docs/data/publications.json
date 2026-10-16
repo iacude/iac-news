@@ -13,6 +13,19 @@
     "type": "journal-article"
   },
   {
+    "title": "Determination of the optimal injection parameters for the SPME Arrow analysis of VOCs",
+    "authors": "Nenad Stojanović, Maik A. Jochmann, Torsten C. Schmidt",
+    "journal": "Analytical and Bioanalytical Chemistry",
+    "abstract": "The injection step in SPME Arrow-GC-MS analysis is critical for sensitivity, repeatability, and peak shape, but is often less systematically optimized than extraction. In this study, the injection efficiency of SPME Arrow fibers was investigated using 1-methylnaphthalene as a model volatile organic compound. Real-time desorption-and-transfer profiles were recorded to evaluate the effects of liner geometry, carrier-gas flow rate, and column insertion depth for two coatings, PDMS/CWR and PDMS/DVB. Here, desorption denotes analyte release from the coating, while transfer denotes the subsequent transport of the released analyte through the injector and into the column or detector connection. Total peak area was used as a measure of transferred analyte amount, while the half-mass point described transfer kinetics. The results show that SPME Arrow injection is governed by a combined desorption-and-transfer process rather than by thermal desorption alone. For PDMS/CWR, a narrow 1.2 mm i.d. liner markedly improved injection efficiency compared with a conventional 2.0 mm i.d. liner, providing relative desorption-and-transfer response close to 100% over a broad range of carrier-gas flow rates. The narrow liner also reduced half-mass points, indicating faster transfer. For PDMS/DVB, however, the highest total peak areas were obtained with the wider liner at elevated carrier-gas flow rates, although the narrow liner produced faster transfer. These results demonstrate that optimal injection conditions are strongly coating-dependent and cannot be predicted solely from liner diameter or carrier-gas velocity. The study highlights the need to optimize SPME Arrow injection parameters separately for each coating and analytical objective. Both total transferred amount and transfer kinetics should be considered, since the fastest transfer condition does not necessarily provide the highest analyte recovery.",
+    "abstract_source": "europe_pmc",
+    "doi": "10.1007/s00216-026-06757-y",
+    "url": "http://dx.doi.org/10.1007/s00216-026-06757-y",
+    "date": "2026-08-31",
+    "orcid": "0000-0002-1905-9999",
+    "put_code": 229363323,
+    "type": "journal-article"
+  },
+  {
     "title": "Parasitic interactions modulate the physiological responses of Gammarus fossarum to the herbicide metazachlor",
     "authors": "Nazmun Nahar, Anam Asghar, Torsten C. Schmidt, Bernd Sures",
     "journal": "Ecotoxicology and Environmental Safety",
@@ -52,6 +65,19 @@
     "type": "journal-article"
   },
   {
+    "title": "Toward Molecular Forensics of Agrochemicals with Orbitrap IRMS: Isotopic Fingerprints of Imidacloprid Sources and Elucidating Hydrolysis",
+    "authors": "Felix Niemann, Nils J. Kuhlbusch, Annika Gruhlke, Sarah P. Rockel, Robert G. H. Marks, Klaus Kerpen, Milen Nachev, Maik A. Jochmann, Andreas Hilkert, Torsten C. Schmidt",
+    "journal": "Journal of the American Society for Mass Spectrometry",
+    "abstract": "Imidacloprid (IMI) is a widespread neonicotinoid insecticide of environmental concern because of its ecotoxicity and persistence. Tracing its commercial sources and environmental transformation is difficult with concentration-based approaches. We explored electrospray ionization Orbitrap isotope ratio mass spectrometry ((ESI) Orbitrap MS-Based Isotope Ratio Analysis) for compound- and fragment-specific stable isotope analysis of IMI at natural abundance. This approach enables direct measurement of 13 C, 15 N, 37 Cl, and multiple substituted isotopologue ratios. Experimental parameters were optimized to control sources of bias in isotopologue ratios. A dual-inlet bracketing protocol enabled normalization and drift correction. IMI from seven different commercial sources could be distinguished by their isotopic fingerprints. We demonstrate that principal component analysis (PCA) can exploit the expanded set of isotopic variables. Two PCAs with distinct variable sets were performed: a fragment-only, nonoverlapping isotopologue subset for source material attribution, and a combined molecular-average and fragment-level subset to maximize manufacturer discrimination. Alkaline hydrolysis (pH ≈ 12, 30 °C) based on compound-average δ 13 C and δ 15 N values measured by (ESI) Orbitrap MS-Based Isotope Ratio Analysis revealed significant carbon isotope fractionation (ε C = -4.3 ± 1.4 ‰) and a statistically negligible nitrogen fractionation (ε N = 0.6 ± 1.6 ‰), consistent with initial OH - attack at the nitroimine carbon as the primary pathway. (ESI) Orbitrap MS-Based Isotope Ratio Analysis can elucidate transformation mechanisms in analytically challenging polar analytes. The chemometric approach of using MS 1 /MS 2 data can be transferred to other (agro-)chemicals either to enhance isotopic discrimination or to discover patterns.",
+    "abstract_source": "europe_pmc",
+    "doi": "10.1021/jasms.5c00444",
+    "url": "http://dx.doi.org/10.1021/jasms.5c00444",
+    "date": "2026-05-06",
+    "orcid": "0000-0002-1905-9999",
+    "put_code": 229363369,
+    "type": "journal-article"
+  },
+  {
     "title": "Automated, downscaled QuEChERS-based sample preparation with performic acid epoxidation for GC–MS/MS analysis of twelve phthalates in edible oils",
     "authors": "Malte Hübschen, Torsten C. Schmidt",
     "journal": "Advances in Sample Preparation",
@@ -62,6 +88,19 @@
     "date": "2026-05",
     "orcid": "0000-0003-1107-4403",
     "put_code": 211751488,
+    "type": "journal-article"
+  },
+  {
+    "title": "Heart‐Cutting Two‐Dimensional Liquid Chromatography‐Isotope Ratio Mass Spectrometry for Compound‐Specific δ 13 C Analysis of Water‐Soluble B Vitamins in Complex Supplement Matrices",
+    "authors": "Sarah P. Rockel, Jacqueline Martiny, Maik A. Jochmann, Torsten C. Schmidt",
+    "journal": "Journal of Separation Science",
+    "abstract": "Compound‐specific stable carbon isotope analysis by one‐dimensional liquid chromatography‐isotope ratio mass spectrometry (LC‐IRMS) is fundamentally constrained by the requirement for fully aqueous mobile phases, which limits chromatographic selectivity and prevents effective separation of analytes from complex sample matrices. Here, a heart‐cutting two‐dimensional LC‐IRMS method (2D‐LC‐IRMS) is presented for the first compound‐specific δ 13 C analysis of the water‐soluble vitamins B5 (pantothenic acid) and B9 (folic acid) in commercial dietary supplements and fortified beverages. An organic‐modified reversed‐phase separation in the first dimension achieved matrix reduction, while a fully aqueous second‐dimension separation ensured IRMS compatibility and delivered baseline‐resolved analyte peaks for precise isotope determination. Validation demonstrated linear calibration over 2–100 mgC L −1 with R 2 ≥ 0.9999, repeatability of ≤ 0.13‰, and isotope‐stability‐based method detection limits of 5 mgC L −1 . Analyzed δ 13 C values were independent of chromatographic configuration, confirming that heart‐cutting transfer does not introduce isotope fractionation. Application to 12 commercial products, including tablets, effervescent formulations, powdered supplements, and an energy drink, yielded δ 13 C ranges of −20.6‰ to −32.9‰ for vitamin B5 and −20.4‰ to −36.4‰ for vitamin B9, reflecting differences in synthetic production routes across manufacturers. The presented workflow extends LC‐IRMS to the compound class of water soluble vitamins that were so far inaccessible to this technique and provides a broadly applicable strategy for compound‐specific isotope analysis of polar analytes in challenging matrices.",
+    "abstract_source": "orcid",
+    "doi": "10.1002/jssc.70419",
+    "url": "http://dx.doi.org/10.1002/jssc.70419",
+    "date": "2026-04",
+    "orcid": "0000-0002-1905-9999",
+    "put_code": 229363354,
     "type": "journal-article"
   },
   {
@@ -86,7 +125,7 @@
     "doi": "10.1021/acs.analchem.5c05840",
     "url": "https://doi.org/10.1021/acs.analchem.5c05840",
     "date": "2026-01-13",
-    "orcid": "0000-0003-1107-4403",
+    "orcid": "0000-0003-1107-4403;0000-0002-1905-9999",
     "put_code": 201138066,
     "type": "journal-article"
   },
@@ -169,11 +208,24 @@
     "type": "journal-article"
   },
   {
+    "title": "Spatial and Temporal Patterns of Gammarus sp. in Lowland Streams Analyzed Through Amino Acid Isotope Analysis",
+    "authors": "Shaista Khaliq, Alexandra Schlenker, Steffen Kümmel, Daniel Höhn, Maik A. Jochmann, Klaus Kerpen, Patrick Fink, Markus Weitere, Torsten C. Schmidt",
+    "journal": "International Review of Hydrobiology",
+    "abstract": "Understanding the trophic ecology and nutrient dynamics of freshwater invertebrates is crucial for evaluating the function and resilience of ecosystems. Although bulk stable isotope analysis is widely used to investigate food web structures, it lacks the resolution required to differentiate between carbon and nitrogen sources at a molecular level. Compound‐specific isotope analysis (CSIA) of amino acids (AAs) offers a more detailed approach; however, its application in freshwater ecosystems, particularly across spatial and temporal gradients, remains limited. This study addresses this issue by applying AA‐specific δ 15 N and δ 13 C analysis to the key detritivore Gammarus spp. across the North Rhine‐Westphalia catchment in Germany over 4 years (2016, 2018, 2020, and 2022). Significant spatial variation in δ 13 C values was observed, while temporal trends were less pronounced. Nonessential AAs exhibited higher δ 13 C values than essential AAs, with glycine being the most enriched in 13 C and lysine and phenylalanine the most depleted. Principal component analysis (PCA) of δ 13 C values revealed variability in carbon sourcing, reflecting shifts between primary producers, microbial inputs, and detrital material. Regarding δ 15 N, trophic AAs such as leucine and glutamic acid were enriched, whereas source AAs such as phenylalanine were depleted, confirming their roles in nitrogen metabolism. PCA of δ 15 N values revealed that some sites maintained stable nitrogen inputs from autotrophic sources, while others showed increasing contributions from microbial or detrital nitrogen over time. Trophic position (TP) estimates for Gammarus spp. were consistent across sites and years, ranging from 1.1 to 1.5 using the TP Glu‐Phe method and from 1.4 to 1.8 using the TP 5AA method. This confirms their role as primary consumers. These findings emphasize the ecological importance of Gammarus spp. in nutrient cycling and demonstrate the effectiveness of CSIA‐AA in unraveling complex trophic interactions and food web dynamics.",
+    "abstract_source": "orcid",
+    "doi": "10.1002/iroh.70024",
+    "url": "http://dx.doi.org/10.1002/iroh.70024",
+    "date": "2025-12",
+    "orcid": "0000-0002-1905-9999",
+    "put_code": 229363790,
+    "type": "journal-article"
+  },
+  {
     "title": "Performance evaluation of novel Ca/Mn-doped perovskite as a multifunctional material in chemical looping reverse water gas shift process for low-carbon fuels",
     "authors": "Adnan Akhtar, Adam Zaidi, Christopher de Leeuwe, Angelos M. Efstathiou, Anam Asghar, Mohamed G. Hassan-Sayed, Syed Zaheer Abbas",
     "journal": "Journal of Environmental Chemical Engineering",
-    "abstract": "",
-    "abstract_source": "none",
+    "abstract": "The chemical looping reverse water gas shift (CL-RWGS) catalytic process offers a promising approach for decarbonizing energy-intensive industries. The CL-RWGS promotes the formation of surface oxygen vacancies in the material, which are subsequently replenished by extracting oxygen from CO 2 , resulting in syngas production. However, there remains a significant gap in the development of materials that not only exhibit redox activity but also enable in-situ carbonation, offering dual functionality for enhanced CO 2 utilization. This study introduces a novel calcium-and manganese-doped LaNiO 3 perovskite, designed for integrated CO 2 sorption and in-situ utilization during CL – RWGS process. Comprehensive characterization confirmed the material ’ s crystalline structure, porosity, and successful incorporation of Ca and Mn dopants. Thermogravimetric analysis (TGA) across 700 – 900 ◦ C revealed a peak oxygen storage capacity of 1.97 mmol O 2 /g and demonstrated excellent redox stability, with less than 1 % performance loss over 17 cycles. RWGS experiments conducted in a packed bed reactor demonstrated up to 57 % CO 2 to CO conversion at 900 ◦ C, approaching the thermodynamic equilibrium value of 60 % under the same operating conditions. Moreover, an H 2 /CO molar ratio of ~2.0, suitable for Fischer-Tropsch synthesis, was achieved at 600 ◦ C and 1.0 bar with a feed H 2 /CO 2 molar ratio of 1.0, attributed to CO 2 chem-isorption via a carbonation-driven mechanism facilitated by the presence of CaO phase. These results suggest that the calcium-and manganese-doped LaNiO 3 perovskite is a highly promising multi-functional material for chemical looping-based CO 2 utilization technologies.",
+    "abstract_source": "semantic_scholar",
     "doi": "10.1016/j.jece.2025.119640",
     "url": "https://doi.org/10.1016/j.jece.2025.119640",
     "date": "2025-12",
@@ -192,6 +244,19 @@
     "date": "2025-11",
     "orcid": "0000-0003-1107-4403",
     "put_code": 194739608,
+    "type": "journal-article"
+  },
+  {
+    "title": "Trophic dynamics and metabolic pathways in host parasite interactions revealed by nitrogen isotope analysis of amino acids in multiple tissues",
+    "authors": "Shaista Khaliq, Milen Nachev, Philip M. Riekenberg, Maik A. Jochmann, Maryam Vosough, Frederik Franke, Jörn P. Scharsack, Joachim Kurtz, Bernd Sures, Marcel T. J. van der Meer, Torsten C. Schmidt",
+    "journal": "Scientific Reports",
+    "abstract": "Trophic interactions are crucial for understanding food web complexity and energy flow in ecosystems. Including parasites in these analyses can alter dynamics and challenge ecological assumptions. Compound-specific isotope analysis offers greater precision than bulk stable isotope analysis by analyzing individual amino acids, providing deeper insights into nutrient exchange and metabolism in host-parasite systems. In this study, we conducted a 120-day controlled feeding experiment to investigate parasite metabolic pathways, host-parasite trophic dynamics, and trophic fractionation between infected and uninfected sticklebacks. Nitrogen isotope composition (δ 15 N) was measured in host Gasterosteus aculeatus liver and muscle tissues, and its ‘cestode’ parasite ( Schistocephalus solidus ). Parasite serine δ 15 N values were higher by 4.4 ± 2.4‰ compared to host liver, indicating a strong metabolic link. Lower proline concentrations and increased alanine δ 15 N values (5‰) indicate support of parasite growth through conversion to hydroxyproline and increased gluconeogenesis. The trophic position difference between parasite and host tissues was < 0.5, suggesting direct assimilation of host-derived products. Infected host tissues exhibited ~ 5‰ increase in glycine δ 15 N over time compared to control tissues, likely reflecting the host’s increased metabolic demand for immune support during infection. This study highlights the complex metabolic interactions in host-parasite systems.",
+    "abstract_source": "orcid",
+    "doi": "10.1038/s41598-025-19052-0",
+    "url": "http://dx.doi.org/10.1038/s41598-025-19052-0",
+    "date": "2025-09-18",
+    "orcid": "0000-0002-1905-9999",
+    "put_code": 229363404,
     "type": "journal-article"
   },
   {
@@ -229,7 +294,7 @@
     "doi": "10.1002/rcm.10067",
     "url": "https://doi.org/10.1002/rcm.10067",
     "date": "2025-08-30",
-    "orcid": "0000-0003-1107-4403",
+    "orcid": "0000-0003-1107-4403;0000-0002-1905-9999",
     "put_code": 183890095,
     "type": "journal-article"
   },
@@ -260,6 +325,19 @@
     "type": "journal-article"
   },
   {
+    "title": "Alkaline persulfate oxidation as an intermediate step for the development of a wet chemical oxidation interface for compound-specific δ15N analysis by LC-IRMS",
+    "authors": "Daniel Köster, Tobias Hesse, Felix Niemann, Maik A. Jochmann, Torsten C. Schmidt",
+    "journal": "Analytical and Bioanalytical Chemistry",
+    "abstract": "For the measurement of compound-specific isotope ratios by liquid chromatography isotope ratio mass spectrometry (LC-IRMS), complete mineralization of organic compounds to a single species of measurement gas is required so that isotopic fractionation can be minimized and corrected by identical treatment with standards. The established use of peroxydisulfate in an acidic environment has its limitations, especially when it comes to the complete oxidation of nitrogen-containing compounds with aromatic ring systems. Under acidic oxidation conditions, ammonium and nitrate were identified as the main nitrogen containing mineralization products of the oxidation of different model compounds. In contrast to the oxidation in an acidic environment, alkaline peroxydisulfate oxidation leads to nitrate as a final mineralization product. The concept of alkaline oxidation was transferred from large-scale batch experiments to a commercially available oxidation reactor used in LC-IRMS systems. The obtained nitrate recoveries indicate that alkaline oxidation could be a promising step towards the measurement of compound-specific nitrogen isotope ratios by LC-IMRS. In our work, we show that alkaline peroxydisulfate oxidation allows faster and more complete mineralization of nitrogen-containing compounds. For several model compounds, 63 to 100% of the initially present nitrogen was converted to nitrate within a reaction time of 43 s. Graphical Abstract",
+    "abstract_source": "orcid",
+    "doi": "10.1007/s00216-025-05795-2",
+    "url": "http://dx.doi.org/10.1007/s00216-025-05795-2",
+    "date": "2025-04",
+    "orcid": "0000-0002-1905-9999",
+    "put_code": 229363484,
+    "type": "journal-article"
+  },
+  {
     "title": "Glyphosate is a transformation product of a widely used aminopolyphosphonate complexing agent",
     "authors": "Anna M. Röhnelt, Philipp R. Martin, Mathis Athmer, Sarah Bieger, Daniel Buchner, Uwe Karst, Carolin Huhn, Torsten C. Schmidt, Stefan B. Haderlein",
     "journal": "Nature Communications",
@@ -270,6 +348,19 @@
     "date": "2025-03-11",
     "orcid": "0000-0003-1107-4403",
     "put_code": 179825435,
+    "type": "journal-article"
+  },
+  {
+    "title": "A Proof‐of‐Principle Study for δ 15 N Measurements of Aqueous Dissolved Nitrate With a Modified LC‐IRMS Interface",
+    "authors": "Tobias Hesse, Felix Niemann, Shaista Khaliq, Daniel Köster, Julian Enss, Christian K. Feld, Milen Nachev, Klaus Kerpen, Maik A. Jochmann, Torsten C. Schmidt",
+    "journal": "Rapid Communications in Mass Spectrometry",
+    "abstract": "Rationale The analysis of nitrogen isotopes in aqueous dissolved nitrate is an effective method for identifying pollution sources and offers the potential to study the nitrogen cycle. However, the measurement of nitrogen isotope ratios of nitrate still requires extensive sample preparation or derivatization. Methods In this study, a modified commercially available liquid chromatography–isotope ratio mass spectrometer (LC‐IRMS) interface is presented that enables automated measurement of δ 15 N signatures from nitrate by online reduction of nitrate in two consecutive steps. First, vanadium(III) chloride is used as a reducing agent to convert NO 3 − to N x O y under acidic conditions. The mix of nitrogen oxides is then transferred into a stream of helium and reduced to nitrogen (N 2 ) analysis gas via a hot copper reactor. Prior to the online conversion of aqueous nitrate into elemental nitrogen, the sample was chromatographically separated from potential matrix effects on a PGC column. Results Precision was achieved at a level below 1.4‰ by injecting 10 μL of 50 mg L −1 N, using five different nitrate standards and reference materials. These materials spanned a range of more than 180‰ in δ 15 N. To demonstrate the applicability of the method, we measured water samples from an enrichment experiment, where isotopically enriched ammonium chloride was administered into a small river over the course of 2 weeks. In contrary to our expectation, the δ 15 N values of river nitrate showed values between +0.4 ± 0.4‰ and +4.1 ± 0.3‰, varying over a small range of 3.7‰. Conclusions Our study showed that the measurement of nitrate nitrogen isotope ratios with a modified LC‐IRMS system is possible but that further modifications and improvements would be necessary for a robust and user‐friendly instrument.",
+    "abstract_source": "orcid",
+    "doi": "10.1002/rcm.9950",
+    "url": "http://dx.doi.org/10.1002/rcm.9950",
+    "date": "2025-02-15",
+    "orcid": "0000-0002-1905-9999",
+    "put_code": 229363765,
     "type": "journal-article"
   },
   {
@@ -294,7 +385,7 @@
     "doi": "10.1021/acs.analchem.4c05956",
     "url": "https://doi.org/10.1021/acs.analchem.4c05956",
     "date": "2025-02-11",
-    "orcid": "0000-0003-1107-4403",
+    "orcid": "0000-0003-1107-4403;0000-0002-1905-9999",
     "put_code": 176739133,
     "type": "journal-article"
   },
@@ -377,11 +468,24 @@
     "type": "journal-article"
   },
   {
+    "title": "Host--Parasite Trophic Interactions as Revealed by Stable Isotope Analyses: Determinants for Trophic and Isotopic Niches of Hosts and Their Associated Parasites",
+    "authors": "Nachev, M, Riekenberg, P M, Jochmann, M A, Born-Torrijos, A, van der Meer, M T J, Smit, N J, Schmidt, T C, Thieltges, D W, Sures, B",
+    "journal": "Aquatic Parasitology: Ecological and Environmental Concepts and Implications of Marine and Freshwater Parasites",
+    "abstract": "",
+    "abstract_source": "none",
+    "doi": "",
+    "url": "",
+    "date": "2025",
+    "orcid": "0000-0002-1905-9999",
+    "put_code": 229364607,
+    "type": "book-chapter"
+  },
+  {
     "title": "Examining the impact of video production quality and presenter identity in science communication on knowledge acquisition and attitude change",
     "authors": "",
     "journal": "INTERNATIONAL JOURNAL OF SCIENCE EDUCATION PART B-COMMUNICATION AND PUBLIC ENGAGEMENT",
-    "abstract": "",
-    "abstract_source": "none",
+    "abstract": "Scientists are increasingly required to communicate their research to the public despite lacking the necessary resources. We investigated whether scientists need to communicate their research themselves, through resource-intensive science communication videos. In an experimental study (N = 125) with a 2 × 2 design, we compared a professionally produced video with a non-professionally produced video and framed the science communicator either as a scientist or an influencer. The results reflect theoretical considerations regarding the unclear role of professionalization and personalization in the effectiveness of science communication videos, with participants in all four conditions gaining significantly more knowledge and changing their attitudes after watching the video. Thus, professionalism and personalization appear to play a subordinate role in the effectiveness of science communication videos. The findings further demonstrate that professionally developed videos are effective for knowledge acquisition if they are perceived as versatile and entertaining and the science communicator is believed to have a scientific background. In sum, the study contributes to evidence-based research on science communication videos and sheds light on prerequisites for their effectiveness.",
+    "abstract_source": "semantic_scholar",
     "doi": "10.1080/21548455.2024.2414358",
     "url": "https://doi.org/10.1080/21548455.2024.2414358",
     "date": "2025",
@@ -463,7 +567,7 @@
     "doi": "10.1021/acsestwater.4c00552",
     "url": "https://doi.org/10.1021/acsestwater.4c00552",
     "date": "2024-12-13",
-    "orcid": "0000-0003-1107-4403",
+    "orcid": "0000-0003-1107-4403;0000-0002-1905-9999",
     "put_code": 171104437,
     "type": "journal-article"
   },
@@ -554,7 +658,7 @@
     "doi": "10.1021/acs.analchem.3c04114",
     "url": "https://doi.org/10.1021/acs.analchem.3c04114",
     "date": "2024-04-23",
-    "orcid": "0000-0003-1107-4403",
+    "orcid": "0000-0003-1107-4403;0000-0002-1905-9999",
     "put_code": 157460381,
     "type": "journal-article"
   },
@@ -585,6 +689,19 @@
     "type": "journal-article"
   },
   {
+    "title": "Perspectives of compound-specific isotope analysis of organic contaminants for assessing environmental fate and managing chemical pollution",
+    "authors": "Thomas B. Hofstetter, Rani Bakkour, Daniel Buchner, Heinrich Eisenmann, Anko Fischer, Matthias Gehre, Stefan B. Haderlein, Patrik Höhener, Daniel Hunkeler, Gwenaël Imfeld, Maik A. Jochmann, Steffen Kümmel, Philipp R. Martin, Sarah G. Pati, Torsten C. Schmidt, Carsten Vogt, Martin Elsner",
+    "journal": "Nature Water",
+    "abstract": "",
+    "abstract_source": "none",
+    "doi": "10.1038/s44221-023-00176-4",
+    "url": "http://dx.doi.org/10.1038/s44221-023-00176-4",
+    "date": "2024-01-17",
+    "orcid": "0000-0002-1905-9999",
+    "put_code": 229362852,
+    "type": "journal-article"
+  },
+  {
     "title": "Elucidating nicotine transfer into water environments via cigarette butt remaining parts",
     "authors": "Sina Dobaradaran, Ursula Telgheder, Gabriel E. De-la-Torre, Sarah P. Rockel, Xenia A.M. Mutke, Torsten C. Schmidt",
     "journal": "Environmental Pollution",
@@ -608,6 +725,19 @@
     "date": "2024-01",
     "orcid": "0000-0003-1107-4403",
     "put_code": 147935734,
+    "type": "journal-article"
+  },
+  {
+    "title": "Stable isotopes (N) facilitate non-invasive labelling of large quantities of macroinvertebrates across different species and feeding types",
+    "authors": "Enss, J, Nachev, M, Jochmann, M A, Schmidt, T C, Feld, C K",
+    "journal": "Ecology and Evolution",
+    "abstract": "While macroinvertebrate dispersal operates at the individual level, predictions of their dispersal capabilities often rely on indirect proxies rather than direct measurements. To gain insight into the dispersal of individual specimens, it is crucial to mark (label) and capture individuals. Isotopic enrichment with 15 N is a non‐invasive method with the potential of labelling large quantities of macroinvertebrates. While the analysis of 15 N is widely utilised in food web studies, knowledge on the specific utility of isotopic enrichment with 15 N for mass labelling of macroinvertebrate individuals across different taxa and feeding types is limited. Previous studies have focused on single species and feeding types, leaving gaps in our understanding of the broader applicability of this method. Therefore, this study aimed to test and compare isotopic mass enrichment across several macroinvertebrate taxa and feeding types. We released 15 NH 4 Cl at five stream reaches in North‐Rhine Westphalia, Germany, and successfully enriched 12 distinct macroinvertebrate taxa (Crustacea and Insecta). Significant enrichment was achieved in active and passive filter feeders, grazers, shredders and predators, and predominantly showed positive correlations with the enrichment of the taxa's main food sources phytobenthos and particulate organic matter. Enrichment levels rose rapidly and peaked at distances between 50 m and 300 m downstream of the isotopic inlet; significant enrichment occurred up to 2000 m downstream of the isotopic inlet in all feeding types. Macroinvertebrate density estimates on the stream bottom averaged to a total of approximately 3.4 million labelled individuals of the 12 investigated taxa, thus showing the high potential of isotopic ( 15 N) enrichment as a non‐invasive method applicable for mass labelling across different macroinvertebrate feeding types. Hence, isotopic enrichment can greatly assist the analysis of macroinvertebrate dispersal through mark‐and‐recapture experiments, as it allows to measure the movement at the level of individual specimens.",
+    "abstract_source": "crossref",
+    "doi": "10.1002/ece3.11539",
+    "url": "https://doi.org/10.1002/ece3.11539",
+    "date": "2024",
+    "orcid": "0000-0002-1905-9999",
+    "put_code": 229364552,
     "type": "journal-article"
   },
   {
@@ -673,6 +803,32 @@
     "date": "2024",
     "orcid": "0000-0003-3808-5890",
     "put_code": 227790896,
+    "type": "journal-article"
+  },
+  {
+    "title": "Dispersive liquid--liquid microextraction as a novel enrichment approach for compound-specific carbon isotope analysis of chlorinated phenols",
+    "authors": "Martin, P R, Buchner, D, Jochmann, M A, Haderlein, S B",
+    "journal": "Analytical Methods",
+    "abstract": "Dispersive liquid–liquid microextraction (DLLME) is a promising approach to enrich (semi-)volatile organics from aqueous samples prior to compound-specific stable isotope analysis (CSIA) by gas chromatography-isotope ratio mass spectrometry (GC-IRMS).",
+    "abstract_source": "crossref",
+    "doi": "10.1039/D3AY01981K",
+    "url": "https://doi.org/10.1039/D3AY01981K",
+    "date": "2024",
+    "orcid": "0000-0002-1905-9999",
+    "put_code": 229364545,
+    "type": "journal-article"
+  },
+  {
+    "title": "Compound-specific isotope analysis of amino acids for aquatic systems -- Problems, challenges, solutions: A review",
+    "authors": "Khaliq, S, Jochmann, M A, Hesse, T, others",
+    "journal": "TrAC Trends in Analytical Chemistry",
+    "abstract": "",
+    "abstract_source": "none",
+    "doi": "10.1016/j.trac.2024.118038",
+    "url": "https://doi.org/10.1016/j.trac.2024.118038",
+    "date": "2024",
+    "orcid": "0000-0002-1905-9999",
+    "put_code": 229364544,
     "type": "journal-article"
   },
   {
