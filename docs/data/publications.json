@@ -70,7 +70,7 @@
   },
   {
     "title": "Comparative non-target screening of advanced oxidation process (AOP)-integrated industrial wastewater treatment using RP and mixed-mode chromatography",
-    "authors": "",
+    "authors": "Felix Drees, Max Reuschenbach, Gerrit Renner, Torsten C. Schmidt",
     "journal": "ANALYTICAL AND BIOANALYTICAL CHEMISTRY",
     "abstract": "Advanced oxidation is increasingly integrated into industrial wastewater treatment to address complex, variable contaminant loads. Here, LC-HRMS non-target screening (NTS) was used to characterize an industrial WWTP incorporating a one-stage advanced oxidation process (AOP) and to compare reversed-phase (RP) and mixed-mode (MM) chromatography for expanding the accessible polarity window. Both methods delivered consistently high data quality, enabling robust feature-level comparisons. Cliff's δ and polarity descriptors indicated differences in feature distributions, while tentative matching to the NORMAN Substance Database suggested substantial overlap between RP and MM and pointed to potential database bias toward less polar compounds. Multivariate analyses captured treatment-driven chemical patterns: PCA separated AOP-treated samples most clearly with MM, consistent with enhanced sensitivity to polar transformation products, whereas RP more strongly differentiated influent from effluent, reflecting predominantly hydrophobic signals. PLS-DA confirmed these trends and enabled robust classification of sample types. Volcano analyses highlighted statistically significant increases, decreases, and persistent signals, showing that while biological treatment removed most components, a subset of AOP-derived features persisted into the final effluent. Overall, broadening the chromatographic window improves NTS-based process assessment and supports targeted optimization of treatment steps for problematic compounds.",
     "abstract_source": "europe_pmc",
@@ -178,7 +178,7 @@
   },
   {
     "title": "Integrated one-pot extraction & derivatization of fatty acids in complex food matrices using a thermomorphic solvent system",
-    "authors": "",
+    "authors": "Kaliyani Wickneswaran, David Köhler, Fatemeh Afzalnia, Gerrit Renner, Torsten C. Schmidt",
     "journal": "ADVANCES IN SAMPLE PREPARATION",
     "abstract": "",
     "abstract_source": "none",
@@ -191,7 +191,7 @@
   },
   {
     "title": "From features to effects: non-target screening meets ecotoxicology in industrial wastewaters",
-    "authors": "",
+    "authors": "Felix Drees, Janina Pytlik, Nazmun Nahar, Esther Smollich, Gerrit Renner, Bernd Sures, Torsten C. Schmidt",
     "journal": "ENVIRONMENTAL SCIENCE-ADVANCES",
     "abstract": "Integrating non-target screening, ecotoxicology, and machine learning identifies chemical patterns driving toxicity in industrial wastewater.",
     "abstract_source": "crossref",
@@ -204,7 +204,7 @@
   },
   {
     "title": "Comparative assessment of feature and component profiling workflow for supercritical fluid chromatography - high resolution mass spectrometry analysis",
-    "authors": "",
+    "authors": "Samuele Pellacani, Giorgio Tomasi, Gerrit Renner, Selina Tisler",
     "journal": "JOURNAL OF CHROMATOGRAPHY A",
     "abstract": "Supercritical fluid chromatography coupled to high-resolution mass spectrometry (SFCHRMS) is gaining attention for non-target screening (NTS), yet systematic evaluations of data-processing workflows remain scarce. Here, we present the first comprehensive comparison between a component-profile (CP) approach based on Region of Interest analysis combined with Component Detection Algorithm and Multivariate Curve Resolution (ROI-CODA-MCR) and a feature-profile (FP) workflow, MS-DIAL. Using extracted ion chromatograms (EICs) as ground truth, both workflows were optimized and benchmarked for standard detection, peak intensity reliability, blank filtering performance, and suspect screening for wastewater samples. Both detected a comparable number of standards (33-35 out of 37) but ROI-derived intensities closely matched EICs (average ratio ≈1, RSD = 5.8%), while MS-DIAL intensities deviated substantially (up to two orders of magnitude, RSD >200%). In non-target analysis, MS-DIAL produced ≈1000 features with many false positives, while ROI-CODA-MCR yielded ≈200 components with lower blank contributions and superior resolution of in-source fragments and adducts. MS-DIAL detected more suspect compounds, highlighting a higher risk of false negatives in the CP approach, particularly for low-intensity or sparse signals. Our results demonstrate that SFCHRMS datasets, often including intense background signals, challenge key assumptions underlying both FP and CP workflows and necessitate careful parameter optimization.",
     "abstract_source": "europe_pmc",
@@ -257,7 +257,7 @@
   },
   {
     "title": "Cigarette filters as a major source of microfibers in aquatic environments",
-    "authors": "",
+    "authors": "Azam Mohammadi, Farkhondeh Bahrani, Gabriel Enrique De-la-Torre, Reza Saeedi, Gerrit Renner, Torsten C. Schmidt, Sina Dobaradaran",
     "journal": "SCIENTIFIC REPORTS",
     "abstract": "",
     "abstract_source": "none",
@@ -340,7 +340,7 @@
   },
   {
     "title": "Computational mass spectrometry for exposomics in non-target screening",
-    "authors": "",
+    "authors": "Torsten C. Schmidt, Gerrit Renner, Saer Samanipour",
     "journal": "ANALYTICAL AND BIOANALYTICAL CHEMISTRY",
     "abstract": "",
     "abstract_source": "none",
@@ -451,7 +451,7 @@
   },
   {
     "title": "Microplastics and phthalate esters in yogurt and buttermilk samples: characterization and health risk assessment",
-    "authors": "",
+    "authors": "Delaram Abedi, Maryam Hazrati Niari, Bahman Ramavandi, Gabriel E. De-la-Torre, Gerrit Renner, Torsten C. Schmidt, Sina Dobaradaran",
     "journal": "JOURNAL OF ENVIRONMENTAL HEALTH SCIENCE AND ENGINEERING",
     "abstract": "The contamination of yogurt and buttermilk (doogh), two widely consumed dairy products, with microplastics (MPs) and phthalic acid esters (PAEs), and subsequently the health effects caused by the contamination of these products on humans, is a potential concern. In this study, the abundance and characteristics of MPs as well as the PAEs concentration in different types of yogurts and buttermilk available in the Iranian market were investigated. The average abundance of MPs in different types of yogurts and buttermilk was between 0.63 and 0.76 and 0.52-0.7 items/mL, respectively. Most detected MPs in yogurt and buttermilk samples were in the size range of 1000-5000 μm with the predominant color and shape of transparent and fiber, respectively. Polyethylene terephthalate (PET) and polyamide (PA) were the dominant polymers in yogurt and buttermilk samples, respectively. The average concentrations of PAEs in different types of yogurt and buttermilk samples were between 5.79 and 11.36 and 1.46-6.93 µg/L, respectively. The findings showed that Di(2-ethylhexyl) phthalate (DEHP) levels in yogurt and buttermilk samples may have a carcinogenic risk for adults and adolescents. According to the results of this study, the intake of MPs and PAEs through high consumption of yogurt and buttermilk should be recognized as a significant source of MPs in the human body. Supplementary information The online version contains supplementary material available at 10.1007/s40201-025-00939-z.",
     "abstract_source": "europe_pmc",
@@ -547,7 +547,7 @@
   },
   {
     "title": "Spray-flame synthesis of LaCo0.2Mn0.8O3 for selective peroxymonosulfate activation into singlet oxygen towards efficient degradation of carbamazepine",
-    "authors": "Hammad, M., Angel, S., Al-kamal, A.K., Asghar, A., Kräenbring, M.-A., Amin, A., Wiedemann, H.T.A., Amin, A.S., Vinayakumar, V., Schmidt, T.C., Kay, C.W.M., Segets, D., Wiggers, H.",
+    "authors": "Mohaned Hammad, Steven Angel, Ahmed K. Al-kamal, Anam Asghar, Mena-Alexander Kräenbring, Adil Amin, Haakon T.A. Wiedemann, Amin S. Amin, Vineetha Vinayakumar, Torsten C. Schmidt, Christopher W.M. Kay, Doris Segets, Hartmut Wiggers",
     "journal": "Process Safety and Environmental Protection",
     "abstract": "",
     "abstract_source": "none",
@@ -560,7 +560,7 @@
   },
   {
     "title": "Modular annular photocatalytic membrane reactor for the degradation of micropollutants: Design and application",
-    "authors": "",
+    "authors": "Michael S. Leupold, Max Reuschenbach, Gerrit Renner, Anam Asghar, Klaus Kerpen, Lukas Fischer, Torsten C. Schmidt",
     "journal": "METHODSX",
     "abstract": "",
     "abstract_source": "none",
@@ -586,7 +586,7 @@
   },
   {
     "title": "Enhanced degradation of cyclic ketone and its diamine derivative using ozone/peroxymonosulfate (O₃/PMS) process",
-    "authors": "Asghar, A., Eßer, W., Hofrath, A.S., Schmidt, T.C.",
+    "authors": "Anam Asghar, Willi Eßer, Alina Sophia Hofrath, Torsten C. Schmidt",
     "journal": "Journal of Water Process Engineering",
     "abstract": "",
     "abstract_source": "none",
@@ -599,7 +599,7 @@
   },
   {
     "title": "Development of a tool to routinely monitor wastewater systems via non-target screening utilizing spatial fingerprinting and temporal trend analysis as prioritization techniques",
-    "authors": "",
+    "authors": "Reyhaneh Armin, Gerrit Renner, Markus Weber, Torsten C. Schmidt",
     "journal": "JOURNAL OF ENVIRONMENTAL MANAGEMENT",
     "abstract": "Non-Target Screening (NTS) is a valuable technique for exploring the chemical composition of aquatic systems. Although target screening has already been established in the quality control of water samples, adopting NTS, especially in data processing, requires further refinements. Herein, we introduce an approach to bring NTS closer to a practical application in routine wastewater monitoring. An in-house tool was developed, specifically designed for quick and efficient NTS data processing based on temporal analysis and spatial fingerprinting as prioritization techniques. This tool enables the creation of a fingerprint database for each emission source. It then uses this database to track the origin of each compound in downstream samples and conducts trend analysis if data from more downstream samples are available. As proof of concept, we successfully applied NTS and this tool to monitor a wastewater system in a chemical industrial park, aiming to routinely safeguard the wastewater treatment plant against potential threats. Specifically, compounds in the influent originating from particular plants were prioritized and their intensity profiles were monitored. Further substances with signal intensities increasing over time were also investigated, and possible transformation products were linked to their respective emission source. For these applications, a tedious structural elucidation of the individual compounds was not required since pattern and trend analyses were based on features. All in all, our NTS-based tool expanded the monitoring scope and demonstrated effectiveness and efficiency in routine wastewater management within the industrial park.",
     "abstract_source": "europe_pmc",
@@ -612,7 +612,7 @@
   },
   {
     "title": "A review of occurrence and concentrations of cellulose acetate and other artificial cellulose microfibers in aquatic environmental matrices: an indicator of cigarette butts' contamination?",
-    "authors": "",
+    "authors": "Fariba Abbasi, Gabriel E. De-la-Torre, Gerrit Renner, Dannielle Senga Green, Torsten C. Schmidt, Sina Dobaradaran",
     "journal": "JOURNAL OF HAZARDOUS MATERIALS ADVANCES",
     "abstract": "",
     "abstract_source": "none",
@@ -706,7 +706,7 @@
   },
   {
     "title": "Examining the impact of video production quality and presenter identity in science communication on knowledge acquisition and attitude change",
-    "authors": "",
+    "authors": "Valentina Nachtigall, Maximilian Krug, Frédéric Kracht, Christian Mainka, Fatih Özcan, Sven Reichenberger, Gerrit Renner, Daniel Siegmund",
     "journal": "INTERNATIONAL JOURNAL OF SCIENCE EDUCATION PART B-COMMUNICATION AND PUBLIC ENGAGEMENT",
     "abstract": "",
     "abstract_source": "none",
@@ -746,7 +746,7 @@
   },
   {
     "title": "Stable isotopes (N) facilitate non-invasive labelling of large quantities of macroinvertebrates across different species and feeding types",
-    "authors": "Enss, J, Nachev, M, Jochmann, M A, Schmidt, T C, Feld, C K",
+    "authors": "Julian Enss, Milen Nachev, Maik A. Jochmann, Torsten C. Schmidt, Christian K. Feld",
     "journal": "Ecology and Evolution",
     "abstract": "While macroinvertebrate dispersal operates at the individual level, predictions of their dispersal capabilities often rely on indirect proxies rather than direct measurements. To gain insight into the dispersal of individual specimens, it is crucial to mark (label) and capture individuals. Isotopic enrichment with 15 N is a non‐invasive method with the potential of labelling large quantities of macroinvertebrates. While the analysis of 15 N is widely utilised in food web studies, knowledge on the specific utility of isotopic enrichment with 15 N for mass labelling of macroinvertebrate individuals across different taxa and feeding types is limited. Previous studies have focused on single species and feeding types, leaving gaps in our understanding of the broader applicability of this method. Therefore, this study aimed to test and compare isotopic mass enrichment across several macroinvertebrate taxa and feeding types. We released 15 NH 4 Cl at five stream reaches in North‐Rhine Westphalia, Germany, and successfully enriched 12 distinct macroinvertebrate taxa (Crustacea and Insecta). Significant enrichment was achieved in active and passive filter feeders, grazers, shredders and predators, and predominantly showed positive correlations with the enrichment of the taxa's main food sources phytobenthos and particulate organic matter. Enrichment levels rose rapidly and peaked at distances between 50 m and 300 m downstream of the isotopic inlet; significant enrichment occurred up to 2000 m downstream of the isotopic inlet in all feeding types. Macroinvertebrate density estimates on the stream bottom averaged to a total of approximately 3.4 million labelled individuals of the 12 investigated taxa, thus showing the high potential of isotopic ( 15 N) enrichment as a non‐invasive method applicable for mass labelling across different macroinvertebrate feeding types. Hence, isotopic enrichment can greatly assist the analysis of macroinvertebrate dispersal through mark‐and‐recapture experiments, as it allows to measure the movement at the level of individual specimens.",
     "abstract_source": "crossref",
@@ -773,7 +773,7 @@
   },
   {
     "title": "qPeaks: A Linear Regression-Based Asymmetric Peak Model for Parameter-Free Automatized Detection and Characterization of Chromatographic Peaks in Non-Target Screening Data",
-    "authors": "",
+    "authors": "Max Reuschenbach, Felix Drees, Michael S. Leupold, Lucie K. Tintrop, Torsten C. Schmidt, Gerrit Renner",
     "journal": "ANALYTICAL CHEMISTRY",
     "abstract": "We present qPeaks (quality peaks), a novel, user-parameter-free algorithm for peak detection and peak characterization applicable to chromatographic data. The algorithm is based on a linearizable regression model that analyzes asymmetric peaks and estimates the specific uncertainties associated with the peak regression parameters. The uncertainties of the parameters are used to derive a data quality score DQS peak , rendering low reliability results more transparent during processing and allowing for the prioritization of generated features. High DQS peak chromatographic peaks have a lower chance of being classified as false-positive and show higher repeatability over multiple measurements. The high efficiency of the algorithm makes it particularly useful for application within processing routines of nontarget screening through chromatography coupled with high-resolution mass spectrometry. qPeaks is integrated into the qAlgorithms nontarget screening processing toolbox and appends a parameter-free chromatographic peak detection and characterization step to it. With qAlgorithms, now high-resolution mass spectra are centroided using the qCentroids algorithms, centroids are clustered to form extracted ion chromatograms (EICs) with the qBinning algorithm, and chromatographic peaks are found on the generated EICs with qPeaks. However, all tools from qAlgorithms can also be used independently.",
     "abstract_source": "europe_pmc",
@@ -841,7 +841,7 @@
   },
   {
     "title": "Non-target screening in water analysis: recent trends of data evaluation, quality assurance, and their future perspectives",
-    "authors": "",
+    "authors": "Maryam Vosough, Torsten C. Schmidt, Gerrit Renner",
     "journal": "ANALYTICAL AND BIOANALYTICAL CHEMISTRY",
     "abstract": "This trend article provides an overview of recent advancements in Non-Target Screening (NTS) for water quality assessment, focusing on new methods in data evaluation, qualification, quantification, and quality assurance (QA/QC). It highlights the evolution in NTS data processing, where open-source platforms address challenges in result comparability and data complexity. Advanced chemometrics and machine learning (ML) are pivotal for trend identification and correlation analysis, with a growing emphasis on automated workflows and robust classification models. The article also discusses the rigorous QA/QC measures essential in NTS, such as internal standards, batch effect monitoring, and matrix effect assessment. It examines the progress in quantitative NTS (qNTS), noting advancements in ionization efficiency-based quantification and predictive modeling despite challenges in sample variability and analytical standards. Selected studies illustrate NTS’s role in water analysis, combining high-resolution mass spectrometry with chromatographic techniques for enhanced chemical exposure assessment. The article addresses chemical identification and prioritization challenges, highlighting the integration of database searches and computational tools for efficiency. Finally, the article outlines the future research needs in NTS, including establishing comprehensive guidelines, improving QA/QC measures, and reporting results. It underscores the potential to integrate multivariate chemometrics, AI/ML tools, and multi-way methods into NTS workflows and combine various data sources to understand ecosystem health and protection comprehensively.",
     "abstract_source": "crossref",
@@ -895,7 +895,7 @@
   },
   {
     "title": "Simultaneous Photodegradation of Remdesivir, Favipiravi, and Diclofenac from Aqueous Solutions Using a Quaternary Plasmonic Ag/Ag-Sg-Tio2-Rgo Photocatalyst: Synthesis, Characterization, and Optimization with Central Composite Design",
-    "authors": "Monjezi, Z., Tarlani, A., Esfahani, H., Asghar, A., Salemi, A., Vosough, M.",
+    "authors": "Zahra Monjezi, Aliakbar Tarlani, Hadi Esfahani, Anam Asghar, Amir Salemi, Maryam Vosough",
     "journal": "Ssrn",
     "abstract": "",
     "abstract_source": "none",
@@ -908,7 +908,7 @@
   },
   {
     "title": "Simultaneous photocatalytic degradation of remdesivir, favipiravir, and diclofenac from aqueous solutions using a quaternary plasmonic Ag/Ag-SG-TiO2-rGO photocatalyst: Synthesis, characterization, optimization, and toxicity assessment",
-    "authors": "Monjezi, Z., Tarlani, A., Esfahani, H., Asghar, A., Salemi, A., Zadmard, R., Vosough, M.",
+    "authors": "Zahra Monjezi, Aliakbar Tarlani, Hadi Esfahani, Anam Asghar, Amir Salemi, Reza Zadmard, Maryam Vosough",
     "journal": "Journal of Water Process Engineering",
     "abstract": "",
     "abstract_source": "none",
@@ -921,7 +921,7 @@
   },
   {
     "title": "Polyacrylic acid functionalized superparamagnetic iron-oxide supraparticles for highly efficient adsorption and removal of contaminants from water",
-    "authors": "Hammad, M., Amin, A., Asghar, A., Anwar, O., Salamon, S., Landers, J., Kräenbring, M.-A., Jain, A., Hardt, S., Wiggers, H., Schmidt, T.C., Wende, H., Schulz, C., Segets, D.",
+    "authors": "Mohaned Hammad, Adil Amin, Anam Asghar, Osama Anwar, Soma Salamon, Joachim Landers, Mena-Alexander Kräenbring, Adarsh Jain, Sebastian Hardt, Hartmut Wiggers, Torsten C. Schmidt, Heiko Wende, Christof Schulz, Doris Segets",
     "journal": "Journal of Water Process Engineering",
     "abstract": "",
     "abstract_source": "none",
@@ -934,7 +934,7 @@
   },
   {
     "title": "Dispersive liquid--liquid microextraction as a novel enrichment approach for compound-specific carbon isotope analysis of chlorinated phenols",
-    "authors": "Martin, P R, Buchner, D, Jochmann, M A, Haderlein, S B",
+    "authors": "Philipp R. Martin, Daniel Buchner, Maik A. Jochmann, Stefan B. Haderlein",
     "journal": "Analytical Methods",
     "abstract": "Dispersive liquid–liquid microextraction (DLLME) is a promising approach to enrich (semi-)volatile organics from aqueous samples prior to compound-specific stable isotope analysis (CSIA) by gas chromatography-isotope ratio mass spectrometry (GC-IRMS).",
     "abstract_source": "crossref",
@@ -947,7 +947,7 @@
   },
   {
     "title": "Compound-specific isotope analysis of amino acids for aquatic systems -- Problems, challenges, solutions: A review",
-    "authors": "Khaliq, S, Jochmann, M A, Hesse, T, others",
+    "authors": "Shaista Khaliq, Maik A. Jochmann, Tobias Hesse, Milen Nachev, Bernd Sures, Philip M. Riekenberg, Marcel T.J. van der Meer, Torsten C. Schmidt",
     "journal": "TrAC Trends in Analytical Chemistry",
     "abstract": "",
     "abstract_source": "none",
@@ -960,7 +960,7 @@
   },
   {
     "title": "Assessment of sample pre-treatment strategies to mitigate matrix effects for microplastics analysis using thermoanalytical techniques",
-    "authors": "",
+    "authors": "Mike Wenzel, Gerrit Renner, Laura Pruin, Carmen Wolf, Christine Kube, Jürgen Schram, Torsten C. Schmidt, Jochen Tuerk",
     "journal": "TRAC-TRENDS IN ANALYTICAL CHEMISTRY",
     "abstract": "",
     "abstract_source": "none",

@@ -17,30 +17,143 @@
     }
   },
   "authors": {
-    "sarah-rockel": {
-      "name": "Sarah P. Rockel",
+    "0000-0002-8643-3979": {
+      "name": "Amir Salemi",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/salemi_amir.jpg",
+      "profile": "https://www.uni-due.de/iac/contact.php"
+    },
+    "0000-0001-7099-4109": {
+      "name": "Anam Asghar",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__150_203_5a6527b71d605737ac78251c8326b1ea_asghar_staff.png",
+      "profile": "https://www.uni-due.de/iac/anam_asghar.php"
+    },
+    "annika-gruhlke": {
+      "name": "Annika Gruhlke",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/content/iac/ag_schmidt/fittosize__600_0_3fd447e0800ff360feb578bb07a02ae0_annika_gruhlke.jpg",
+      "profile": "https://www.uni-due.de/iac/annika_gruhlke.php"
+    },
+    "bernd-sures": {
+      "name": "Bernd Sures",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/bernd_sures.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "christian-k-feld": {
+      "name": "Christian K. Feld",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/christian_feld.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "corina-andronescu": {
+      "name": "Corina Andronescu",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/corina_andronescu.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "daniel-grabner": {
+      "name": "Daniel Grabner",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/daniel_grabner.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "daniel-hoehn": {
+      "name": "Daniel Höhn",
       "aliases": [
-        "Sarah Rockel"
+        "Daniel Hoehn"
       ],
-      "image": "https://www.uni-due.de/imperia/md/images/iac/ag_schmidt/fittosize__600_0_168663df4b815ae18e6ddf16b04b6e57_rockel_sarah.jpg",
-      "profile": "https://www.uni-due.de/iac/sarah-rockel.php"
+      "image": "https://www.uni-due.de/imperia/md/images/iac/ag_schmidt/fittosize__600_0_759574c16d68537d2474e2414db4b6ea_hoehn.jpg",
+      "profile": "https://www.uni-due.de/iac/hoehn.php"
+    },
+    "daniela-beisser": {
+      "name": "Daniela Beisser",
+      "aliases": [
+        "Daniela Beißer"
+      ],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/daniela_beisser.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "dennis-schmiege": {
+      "name": "Dennis Schmiege",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/dennis_schmiege.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "fabian-itzel": {
+      "name": "Fabian Itzel",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/fabian_itzel.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "felix-drees": {
+      "name": "Felix Drees",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__600_0_14f650708e9f9fd237218319cabd9257_felix_drees.jpg",
+      "profile": "https://www.uni-due.de/iac/felix_drees.php"
+    },
+    "felix-niemann": {
+      "name": "Felix Niemann",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__600_0_3f6b720c715a2cfb8a3fba7d967a8a08_niemann_felix.jpeg",
+      "profile": "https://www.uni-due.de/iac/felix_niemann.php"
+    },
+    "0000-0003-3808-5890": {
+      "name": "Gerrit Renner",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__150_203_607a8fbd28650dc88b767dda55cd8dc8_renner_staff.png",
+      "profile": "https://www.uni-due.de/iac/gerrit_renner.php"
+    },
+    "indra-bartels": {
+      "name": "Indra Bartels",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__600_0_43d11d9b4b5868f3e12287262a31e1b5_indra_bartels.jpg",
+      "profile": "https://www.uni-due.de/iac/indra_bartels.php"
+    },
+    "jens-boenigk": {
+      "name": "Jens Boenigk",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/jens_boenigk.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "0000-0002-9972-277X": {
+      "name": "Jochen Tuerk",
+      "aliases": [
+        "Jochen Türk"
+      ],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/jochen_tuerk.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
     },
     "0009-0003-2001-5381": {
       "name": "Kevin Fabián Guerrero-Granados",
       "aliases": [
         "Kevin Fabián Guerrero Granados",
-        "Kevin Fabian Guerrero-Granados"
+        "Kevin Fabian Guerrero-Granados",
+        "K.F. Guerrero-Granados"
       ],
       "image": "https://www.uni-due.de/imperia/md/images/iac/ag_schmidt/fittosize__600_0_9d94f6988ae60164d3d3dc8a140a8f1c_kevin_guerrero.jpg",
       "profile": "https://www.uni-due.de/iac/kevin_guerrero.php"
     },
-    "0000-0003-1107-4403": {
-      "name": "Torsten C. Schmidt",
+    "klaus-kerpen": {
+      "name": "Klaus Kerpen",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__150_203_3a2982d9aa3362da5111b5e3454d8ac5_kerpen_staff.png",
+      "profile": "https://www.uni-due.de/iac/klaus_kerpen.php"
+    },
+    "lucie-tintrop": {
+      "name": "Lucie K. Tintrop",
       "aliases": [
-        "Torsten Claus Schmidt"
+        "Lucie Tintrop"
       ],
-      "image": "https://www.uni-due.de/imperia/md/content/iac/ag_schmidt/fittosize__200_245_de616317cf40f7b99ef372db5a8d648b_schmidttc_photo.png",
-      "profile": "https://www.uni-due.de/iac/2014_torsten_schmidt.shtml"
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__600_0_c2f08d9c91a923074ae22b14601ca02a_lucie_tintrop.jpg",
+      "profile": "https://www.uni-due.de/iac/lucie_tintrop.php"
+    },
+    "lukas-fischer": {
+      "name": "Lukas Fischer",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/lukas_fischer.png",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
     },
     "0000-0002-1905-9999": {
       "name": "Maik A. Jochmann",
@@ -49,13 +162,134 @@
         "Maik Jochmann"
       ],
       "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__150_203_a79fb17f827293e89f0645a51b104766_jochmann_staff.png",
+      "profile": "https://www.uni-due.de/iac/2014_maik_jochmann.php"
+    },
+    "malte-huebschen": {
+      "name": "Malte Hübschen",
+      "aliases": [
+        "Malte Huebschen"
+      ],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__600_0_73d15b119a40a64747a13b823e292fa6_h%C3%BCbschen_malte.jpg",
+      "profile": "https://www.uni-due.de/iac/malte_huebschen.php"
+    },
+    "0000-0002-9065-7457": {
+      "name": "Maryam Vosough",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__150_119_cd396fb45d18cf640f74bd778193687e_maryam.png",
       "profile": "https://www.uni-due.de/iac/contact.php"
     },
-    "0000-0002-8643-3979": {
-      "name": "Amir Salemi",
+    "michael-leupold": {
+      "name": "Michael S. Leupold",
+      "aliases": [
+        "Michael Leupold"
+      ],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__600_0_ce33e6190783c7e00042d95909f29533_michael_leupold.jpg",
+      "profile": "https://www.uni-due.de/iac/michael_leupold.php"
+    },
+    "milen-nachev": {
+      "name": "Milen Nachev",
       "aliases": [],
-      "image": "https://www.uni-due.de/imperia/md/images/iac/salemi_amir.jpg",
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/milen_nachev.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "nazmun-nahar": {
+      "name": "Nazmun Nahar",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/nazmun_nahar.png",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "nenad-stojanovic": {
+      "name": "Nenad Stojanović",
+      "aliases": [
+        "Nenad Stojanovic"
+      ],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__162_0_74a890034efb404d3a3f4045cf78a2a3_nenad_stajanovic_2017.jpg",
+      "profile": "https://www.uni-due.de/iac/nenad_stojanovic.php"
+    },
+    "nicolai-baetz": {
+      "name": "Nicolai Baetz",
+      "aliases": [
+        "Nicolai Bätz"
+      ],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/nicolai_baetz.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "sarah-rockel": {
+      "name": "Sarah P. Rockel",
+      "aliases": [
+        "Sarah Rockel"
+      ],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/ag_schmidt/fittosize__600_0_168663df4b815ae18e6ddf16b04b6e57_rockel_sarah.jpg",
+      "profile": "https://www.uni-due.de/iac/sarah-rockel.php"
+    },
+    "sebastian-prati": {
+      "name": "Sebastian Prati",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/sebastian_prati.png",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "shaista-khaliq": {
+      "name": "Shaista Khaliq",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__600_0_1dc2d7208e2a75e5d9fd86c3d3cd0173_shaista_khaliq.jpg",
+      "profile": "https://www.uni-due.de/iac/shaista_khaliq.php"
+    },
+    "sina-dobaradaran": {
+      "name": "Sina Dobaradaran",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__150_200_6fd0c2e0b45022a9872bfa88be050355_sina.jpg",
       "profile": "https://www.uni-due.de/iac/contact.php"
+    },
+    "sonja-zimmermann": {
+      "name": "Sonja Zimmermann",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/sonja_zimmermann.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "stefan-panglisch": {
+      "name": "Stefan Panglisch",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/stefan_panglisch.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "stephan-barcikowski": {
+      "name": "Stephan Barcikowski",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/stephan_barcikowski.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "stephane-kenmoe": {
+      "name": "Stephane Kenmoe",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/stephane_kenmoe.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "susanne-moebus": {
+      "name": "Susanne Moebus",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/susanne_moebus.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "sven-reichenberger": {
+      "name": "Sven Reichenberger",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/zwu/mitglieder/sven_reichenberger.jpg",
+      "profile": "https://www.uni-due.de/zwu/mitglieder-liste.php"
+    },
+    "0000-0003-1107-4403": {
+      "name": "Torsten C. Schmidt",
+      "aliases": [
+        "Torsten Claus Schmidt",
+        "Torsten Schmidt"
+      ],
+      "image": "https://www.uni-due.de/imperia/md/content/iac/ag_schmidt/fittosize__200_245_de616317cf40f7b99ef372db5a8d648b_schmidttc_photo.png",
+      "profile": "https://www.uni-due.de/iac/2014_torsten_schmidt.shtml"
+    },
+    "0000-0003-0347-2989": {
+      "name": "Ursula Telgheder",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/telgheder_staff.png",
+      "profile": "https://www.uni-due.de/iac/ursula_telgheder.php"
     }
   }
 }

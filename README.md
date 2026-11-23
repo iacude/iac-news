@@ -88,7 +88,7 @@ Das Widget blendet bekannte zukünftige Termine aus. Für die hervorgehobenen Ka
 
 ## 4. Bilder und Autorenfilter
 
-Die Bildzuordnung steht in `docs/data/publication-media.json`. Der Publikationsworkflow aktualisiert nur `publications.json`. Bildzuordnungen bleiben deshalb beim nächsten Lauf erhalten.
+Die Bildzuordnung steht in `docs/data/publication-media.json`. Der Publikationsworkflow aktualisiert nur `publications.json`. Bildzuordnungen bleiben deshalb beim nächsten Lauf erhalten. Die Porträt-URLs stammen aus den veröffentlichten IAC-Profilen und dem ZWU-Verzeichnis der UDE. Crossref ergänzt fehlende Autorenlisten und Listen mit getrennt gespeicherten Nachnamen und Initialen, wenn die DOI hinterlegt ist.
 
 - Unter `graphicalAbstracts` steht pro kleingeschriebener DOI die Bild-URL. `license` und `licenseUrl` ergänzen den Lizenzhinweis. Mit `alt` lässt sich die Grafik beschreiben.
 - Unter `authors` bekommt jede Person einen stabilen Schlüssel. Wenn eine bestätigte ORCID vorliegt, kann sie als Schlüssel dienen. `name` ist der Anzeigename, `aliases` listet bestätigte Schreibweisen und `image` verweist auf die öffentlich publizierte Bilddatei aus Imperia. `profile` dokumentiert die Quelle des Porträts. Falls der Standardausschnitt das Gesicht schlecht trifft, lässt sich der Bildfokus mit `position: [50, 35]` als horizontale und vertikale Prozentangabe anpassen.

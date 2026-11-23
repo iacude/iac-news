@@ -297,6 +297,27 @@ def fetch_crossref_work(session: requests.Session, doi: Optional[str], cfg: Fetc
     return (data or {}).get("message") or {}
 
 
+def needs_author_metadata(authors: Optional[str]) -> bool:
+    if not authors or not authors.strip():
+        return True
+    parts = [part.strip() for part in authors.split(",")]
+    return len(parts) > 1 and all(
+        re.fullmatch(r"(?:[A-Z][.\s-]*){1,4}", part) for part in parts[1::2]
+    )
+
+
+def crossref_author_names(work: Dict[str, Any]) -> Optional[str]:
+    names = []
+    for author in work.get("author") or []:
+        full_name = " ".join(
+            value for field in ("given", "family") if (value := clean_text(author.get(field)))
+        )
+        name = full_name or clean_text(author.get("name"))
+        if name:
+            names.append(name.replace(",", ""))
+    return ", ".join(names) or None
+
+
 def crossref_online_date(work: Dict[str, Any]) -> Optional[str]:
     dates = (work.get("published-online") or {}).get("date-parts") or []
     if not dates:
@@ -392,6 +413,11 @@ def enrich_publications(
             if with_crossref and doi:
                 crossref = fetch_crossref_work(session, doi, cfg)
                 time.sleep(max(0.25, cfg.pause_seconds))
+
+            if crossref and needs_author_metadata(pub.get("authors")):
+                author_names = crossref_author_names(crossref)
+                if author_names:
+                    pub["authors"] = author_names
 
             online_date = crossref_online_date(crossref)
             if override:
