@@ -7,31 +7,19 @@
   <link rel="stylesheet" href="./publications-widget.css">
   <style>
     body {
-      max-width: 1180px;
+      max-width: 1132px;
+      box-sizing: border-box;
       margin: 2rem auto;
       padding: 0 1rem;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-    .intro {
-      max-width: 760px;
-      margin-bottom: 2rem;
-      color: #4a5568;
-    }
-    code {
-      background: #f1f5f9;
-      padding: 0.1rem 0.25rem;
-      border-radius: 4px;
-    }
   </style>
 </head>
 <body>
-  <h1>IAC Publications News</h1>
-  <p class="intro">
-    Static GitHub Pages preview. The same widget can be embedded in Imperia by loading
-    <code>publications-widget.css</code>, setting the JSON URL, and loading <code>publications-widget.js</code>.
-  </p>
-
-  <div id="pub-news">Loading publications…</div>
+  <main>
+    <h1>IAC Publications News</h1>
+    <div id="pub-news">Loading publications…</div>
+  </main>
 
   <script>
     window.PUBLICATIONS_WIDGET_CONFIG = {
@@ -41,7 +29,7 @@
       featuredCount: 5,
       locale: "en-US",
       language: "en",
-      title: "Recent Publications"
+      showHeader: false
     };
   </script>
   <script src="./publications-widget.js" defer></script>

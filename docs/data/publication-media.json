@@ -1,0 +1,61 @@
+{
+  "graphicalAbstracts": {
+    "10.1016/j.greeac.2026.100378": {
+      "image": "https://ars.els-cdn.com/content/image/1-s2.0-S2772577426000583-ga1.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "10.1016/j.ecoenv.2026.120199": {
+      "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0147651326005282-ga1.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "10.1016/j.mex.2026.103938": {
+      "image": "https://ars.els-cdn.com/content/image/1-s2.0-S2215016126001561-ga1.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "authors": {
+    "sarah-rockel": {
+      "name": "Sarah P. Rockel",
+      "aliases": [
+        "Sarah Rockel"
+      ],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/ag_schmidt/fittosize__600_0_168663df4b815ae18e6ddf16b04b6e57_rockel_sarah.jpg",
+      "profile": "https://www.uni-due.de/iac/sarah-rockel.php"
+    },
+    "0009-0003-2001-5381": {
+      "name": "Kevin Fabián Guerrero-Granados",
+      "aliases": [
+        "Kevin Fabián Guerrero Granados",
+        "Kevin Fabian Guerrero-Granados"
+      ],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/ag_schmidt/fittosize__600_0_9d94f6988ae60164d3d3dc8a140a8f1c_kevin_guerrero.jpg",
+      "profile": "https://www.uni-due.de/iac/kevin_guerrero.php"
+    },
+    "0000-0003-1107-4403": {
+      "name": "Torsten C. Schmidt",
+      "aliases": [
+        "Torsten Claus Schmidt"
+      ],
+      "image": "https://www.uni-due.de/imperia/md/content/iac/ag_schmidt/fittosize__200_245_de616317cf40f7b99ef372db5a8d648b_schmidttc_photo.png",
+      "profile": "https://www.uni-due.de/iac/2014_torsten_schmidt.shtml"
+    },
+    "0000-0002-1905-9999": {
+      "name": "Maik A. Jochmann",
+      "aliases": [
+        "Maik André Jochmann",
+        "Maik Jochmann"
+      ],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/fittosize__150_203_a79fb17f827293e89f0645a51b104766_jochmann_staff.png",
+      "profile": "https://www.uni-due.de/iac/contact.php"
+    },
+    "0000-0002-8643-3979": {
+      "name": "Amir Salemi",
+      "aliases": [],
+      "image": "https://www.uni-due.de/imperia/md/images/iac/salemi_amir.jpg",
+      "profile": "https://www.uni-due.de/iac/contact.php"
+    }
+  }
+}
