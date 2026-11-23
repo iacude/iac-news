@@ -6,6 +6,7 @@
     containerId: "pub-news",
     maxItems: 20,
     featuredCount: 5,
+    featuredDays: 90,
     locale: "en-US",
     language: "en",
     cache: "daily", // "daily", "hourly", false
@@ -102,41 +103,49 @@
       return;
     }
 
+    const now = new Date();
+    const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    const maxItems = toPositiveInt(config.maxItems, DEFAULTS.maxItems);
+    const earliestFeatured = today - toPositiveInt(config.featuredDays, DEFAULTS.featuredDays) * 86400000;
     const sorted = items
       .filter((item) => item && (item.title || item.doi || item.url))
-      .slice()
-      .sort((a, b) => parseDateValue(b.date) - parseDateValue(a.date))
-      .slice(0, toPositiveInt(config.maxItems, DEFAULTS.maxItems));
+      .map((item) => ({ item, date: parseDateParts(item.date) }))
+      .filter(({ date }) => !date || date.timestamp <= today)
+      .sort((a, b) => (b.date?.timestamp ?? -Infinity) - (a.date?.timestamp ?? -Infinity));
 
     if (!sorted.length) {
       renderStatus(container, messages.empty);
       return;
     }
 
-    const featuredCount = Math.min(toPositiveInt(config.featuredCount, DEFAULTS.featuredCount), sorted.length);
-    const featured = sorted.slice(0, featuredCount);
-    const rest = sorted.slice(featuredCount);
+    const featuredCount = Math.min(toPositiveInt(config.featuredCount, DEFAULTS.featuredCount), maxItems);
+    const featured = sorted
+      .filter(({ date }) => date?.precision === "day" && date.timestamp >= earliestFeatured)
+      .slice(0, featuredCount);
+    const rest = sorted.filter((entry) => !featured.includes(entry)).slice(0, maxItems - featured.length);
 
     const root = document.createElement("div");
     root.className = "pub-news-layout";
 
     if (config.showHeader !== false) {
-      root.appendChild(createHeader(config.title, messages.subtitle(sorted.length)));
+      root.appendChild(createHeader(config.title, messages.subtitle(featured.length + rest.length)));
     }
 
-    const featuredSection = document.createElement("section");
-    featuredSection.className = "pub-news-featured";
-    featured.forEach((publication, index) => {
-      const card = createCard(publication, true, config, messages);
-      if (index === 0) card.classList.add("pub-card--featured-main");
-      featuredSection.appendChild(card);
-    });
-    root.appendChild(featuredSection);
+    if (featured.length) {
+      const featuredSection = document.createElement("section");
+      featuredSection.className = "pub-news-featured";
+      featured.forEach(({ item }, index) => {
+        const card = createCard(item, true, config, messages);
+        if (index === 0) card.classList.add("pub-card--featured-main");
+        featuredSection.appendChild(card);
+      });
+      root.appendChild(featuredSection);
+    }
 
     if (rest.length) {
       const restSection = document.createElement("section");
       restSection.className = "pub-news-rest";
-      rest.forEach((publication) => restSection.appendChild(createCard(publication, false, config, messages)));
+      rest.forEach(({ item }) => restSection.appendChild(createCard(item, false, config, messages)));
       root.appendChild(restSection);
     }
 
@@ -209,34 +218,31 @@
     container.replaceChildren(box);
   }
 
-  function parseDateValue(value) {
-    const parts = parseDateParts(value);
-    if (!parts) return 0;
-    return Date.UTC(parts.year, Math.max(parts.month - 1, 0), Math.max(parts.day, 1));
-  }
-
   function parseDateParts(value) {
     if (!value) return null;
-    const match = String(value).trim().match(/^(\d{4})(?:-(\d{1,2})(?:-(\d{1,2}))?)?/);
+    const match = String(value).trim().match(/^(\d{4})(?:-(\d{1,2})(?:-(\d{1,2}))?)?$/);
     if (!match) return null;
-    return {
-      year: Number(match[1]),
-      month: Number(match[2] || 1),
-      day: Number(match[3] || 1),
-      precision: match[3] ? "day" : match[2] ? "month" : "year"
-    };
+
+    const year = Number(match[1]);
+    const month = Number(match[2] || 1);
+    const day = Number(match[3] || 1);
+    const timestamp = Date.UTC(year, month - 1, day);
+    const date = new Date(timestamp);
+    if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) {
+      return null;
+    }
+    return { timestamp, precision: match[3] ? "day" : match[2] ? "month" : "year" };
   }
 
   function formatDate(value, locale) {
     const parts = parseDateParts(value);
     if (!parts) return "";
-    const date = new Date(Date.UTC(parts.year, parts.month - 1, parts.day));
     const options = parts.precision === "year"
       ? { year: "numeric", timeZone: "UTC" }
       : parts.precision === "month"
         ? { year: "numeric", month: "short", timeZone: "UTC" }
         : { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" };
-    return new Intl.DateTimeFormat(locale || "en-US", options).format(date);
+    return new Intl.DateTimeFormat(locale || "en-US", options).format(parts.timestamp);
   }
 
   function shorten(text, maxLen) {

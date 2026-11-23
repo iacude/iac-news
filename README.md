@@ -60,13 +60,14 @@ https://USERNAME.github.io/REPOSITORY/data/publications.json
 
 ## 3. Automatische Aktualisierung
 
-Der Workflow `.github/workflows/update-publications.yml` läuft standardmäßig täglich um `05:17 UTC` und kann zusätzlich manuell über `Actions → Update publications data → Run workflow` gestartet werden.
+Der Workflow `.github/workflows/update-publications.yml` läuft standardmäßig freitags um `05:17 UTC` und kann zusätzlich manuell über `Actions → Update publications data → Run workflow` gestartet werden.
 
 Der zentrale Befehl im Workflow ist:
 
 ```bash
 python fetch_publications.py \
   --orcid-file orcids.txt \
+  --date-overrides publication-date-overrides.json \
   --out docs/data/publications.json \
   --with-details \
   --detail-count 80 \
@@ -79,6 +80,10 @@ python fetch_publications.py \
 ```
 
 Wenn sich die JSON-Datei geändert hat, committet GitHub Actions sie automatisch zurück ins Repository. Dadurch wird GitHub Pages aktualisiert.
+
+Der Workflow fragt über die DOI das Online-Publikationsdatum bei Crossref ab. Ein tagesgenaues Online-Datum hat Vorrang vor dem ORCID-Datum. Wenn bei beiden Quellen eine genauere Angabe fehlt, bleibt die vorhandene Jahres- oder Monatsangabe erhalten. Für fehlende oder falsche Angaben kann das Datum nach Prüfung auf der Verlagsseite in `publication-date-overrides.json` als DOI mit Datum im Format `YYYY-MM-DD` hinterlegt werden. Diese Korrekturen haben bei jedem Lauf Vorrang.
+
+Das Widget blendet bekannte zukünftige Termine aus. Für die hervorgehobenen Karten kommen nur tagesgenau datierte Publikationen aus den letzten 90 Tagen infrage. Das Zeitfenster lässt sich mit `featuredDays` und die Zahl der Karten mit `featuredCount` einstellen.
 
 ## 4. Imperia-Einbindung
 
