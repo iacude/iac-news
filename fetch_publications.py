@@ -289,14 +289,62 @@ def fetch_work_detail(session: requests.Session, orcid: str, put_code: Any, cfg:
     return fetch_json(session, f"{API_BASE}/{orcid}/work/{put_code}", cfg)
 
 
-def fetch_crossref_abstract(session: requests.Session, doi: Optional[str], cfg: FetchConfig) -> Optional[str]:
+def fetch_crossref_work(session: requests.Session, doi: Optional[str], cfg: FetchConfig) -> Dict[str, Any]:
     doi = normalize_doi(doi)
     if not doi:
-        return None
+        return {}
     data = fetch_json(session, f"https://api.crossref.org/works/{quote(doi, safe='')}", cfg)
-    if not data:
+    return (data or {}).get("message") or {}
+
+
+def needs_author_metadata(authors: Optional[str]) -> bool:
+    if not authors or not authors.strip():
+        return True
+    parts = [part.strip() for part in authors.split(",")]
+    return len(parts) > 1 and all(
+        re.fullmatch(r"(?:[A-Z][.\s-]*){1,4}", part) for part in parts[1::2]
+    )
+
+
+def crossref_author_names(work: Dict[str, Any]) -> Optional[str]:
+    names = []
+    for author in work.get("author") or []:
+        full_name = " ".join(
+            value for field in ("given", "family") if (value := clean_text(author.get(field)))
+        )
+        name = full_name or clean_text(author.get("name"))
+        if name:
+            names.append(name.replace(",", ""))
+    return ", ".join(names) or None
+
+
+def crossref_online_date(work: Dict[str, Any]) -> Optional[str]:
+    dates = (work.get("published-online") or {}).get("date-parts") or []
+    if not dates:
         return None
-    return clean_text((data.get("message") or {}).get("abstract"))
+    parts = dates[0]
+    if not isinstance(parts, list) or not 1 <= len(parts) <= 3:
+        return None
+    if any(type(part) is not int for part in parts):
+        return None
+    try:
+        date = dt.date(*(parts + [1] * (3 - len(parts))))
+    except ValueError:
+        return None
+    return date.isoformat()[: (4, 7, 10)[len(parts) - 1]]
+
+
+def load_date_overrides(path: Path) -> Dict[str, str]:
+    overrides = {}
+    for doi, value in json.loads(path.read_text(encoding="utf-8")).items():
+        key = normalize_doi(doi)
+        if not key:
+            raise ValueError(f"Invalid DOI in {path}: {doi}")
+        date = dt.date.fromisoformat(value)
+        if date.isoformat() != value:
+            raise ValueError(f"Expected YYYY-MM-DD for {doi} in {path}")
+        overrides[key.lower()] = value
+    return overrides
 
 
 def fetch_semantic_scholar_abstract(session: requests.Session, doi: Optional[str], cfg: FetchConfig) -> Optional[str]:
@@ -334,18 +382,22 @@ def enrich_publications(
     with_crossref: bool,
     with_pubmed: bool,
     with_s2: bool,
+    date_overrides: Dict[str, str],
 ) -> None:
     with requests.Session() as session:
-        for pub in pubs[: max(0, detail_count)]:
+        for index, pub in enumerate(pubs):
+            enrich_details = index < detail_count
             orcid = str(pub.get("orcid") or "").split(";", 1)[0]
             put_code = pub.get("put_code") or pub.get("put-code")
-            if orcid and put_code is not None:
+            if enrich_details and orcid and put_code is not None:
                 detail = fetch_work_detail(session, orcid, put_code, cfg)
                 time.sleep(cfg.pause_seconds)
                 if detail:
                     pub["title"] = extract_title(detail) or pub.get("title")
                     pub["journal"] = extract_journal(detail) or pub.get("journal")
-                    pub["date"] = format_publication_date(detail.get("publication-date")) or pub.get("date")
+                    detail_date = format_publication_date(detail.get("publication-date"))
+                    if detail_date and len(detail_date) >= len(pub.get("date") or ""):
+                        pub["date"] = detail_date
                     ext_ids = extract_external_ids(detail)
                     pub["doi"] = ext_ids.get("doi") or pub.get("doi")
                     pub["url"] = (detail.get("url") or {}).get("value") or doi_to_url(pub.get("doi")) or pub.get("url")
@@ -355,11 +407,34 @@ def enrich_publications(
                         pub["abstract"] = abstract
                         pub["abstract_source"] = "orcid"
 
-            if pub.get("abstract"):
+            doi = normalize_doi(pub.get("doi"))
+            override = date_overrides.get(doi.lower()) if doi else None
+            crossref = {}
+            if with_crossref and doi:
+                crossref = fetch_crossref_work(session, doi, cfg)
+                time.sleep(max(0.25, cfg.pause_seconds))
+
+            if crossref and needs_author_metadata(pub.get("authors")):
+                author_names = crossref_author_names(crossref)
+                if author_names:
+                    pub["authors"] = author_names
+
+            online_date = crossref_online_date(crossref)
+            if override:
+                pub["date"] = override
+                pub["date_source"] = "manual"
+            elif online_date and (len(online_date) == 10 or len(online_date) > len(pub.get("date") or "")):
+                pub["date"] = online_date
+                pub["date_source"] = "crossref_online"
+
+            if not enrich_details or pub.get("abstract"):
                 continue
-            doi = pub.get("doi")
+            abstract = clean_text(crossref.get("abstract"))
+            if abstract:
+                pub["abstract"] = abstract
+                pub["abstract_source"] = "crossref"
+                continue
             for enabled, source_name, fn in [
-                (with_crossref, "crossref", fetch_crossref_abstract),
                 (with_pubmed, "europe_pmc", fetch_europe_pmc_abstract),
                 (with_s2, "semantic_scholar", fetch_semantic_scholar_abstract),
             ]:
@@ -372,14 +447,16 @@ def enrich_publications(
                     pub["abstract_source"] = source_name
 
 
-def filter_year_window(pubs: List[Publication], years_back: int, years_forward: int) -> List[Publication]:
+def filter_year_window(
+    pubs: List[Publication], years_back: int, years_forward: int, *, include_undated: bool = False
+) -> List[Publication]:
     current_year = dt.date.today().year
     min_year = current_year - max(0, years_back)
     max_year = current_year + max(0, years_forward)
     filtered = []
     for pub in pubs:
         year, _, _ = parse_date_parts(pub.get("date"))
-        if year and min_year <= year <= max_year:
+        if min_year <= year <= max_year or (include_undated and not year):
             filtered.append(pub)
     return filtered
 
@@ -387,7 +464,10 @@ def filter_year_window(pubs: List[Publication], years_back: int, years_forward: 
 def limit_fields(pub: Publication) -> Publication:
     # Keep the published JSON small and stable. Frontend ignores unknown fields, but this avoids leaking API clutter.
     keep = ["title", "authors", "journal", "abstract", "abstract_source", "doi", "url", "date", "orcid", "put_code", "type"]
-    return {key: pub.get(key) if pub.get(key) is not None else "" for key in keep}
+    fields = {key: pub.get(key) if pub.get(key) is not None else "" for key in keep}
+    if pub.get("date_source"):
+        fields["date_source"] = pub["date_source"]
+    return fields
 
 
 def write_json(pubs: List[Publication], out_path: Path) -> None:
@@ -399,10 +479,11 @@ def write_json(pubs: List[Publication], out_path: Path) -> None:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Fetch ORCID works and write publications JSON for a static website.")
     parser.add_argument("--orcid-file", type=Path, default=Path("orcids.txt"), help="Text file with one ORCID iD per line.")
+    parser.add_argument("--date-overrides", type=Path, help="Optional JSON mapping DOI to a verified online date (YYYY-MM-DD).")
     parser.add_argument("--out", type=Path, default=Path("docs/data/publications.json"), help="Output JSON path.")
     parser.add_argument("--with-details", action="store_true", help="Fetch ORCID work details for richer author and abstract data.")
     parser.add_argument("--detail-count", type=int, default=80, help="How many newest works to enrich with detail calls.")
-    parser.add_argument("--with-crossref", action="store_true", help="Fallback: use Crossref abstracts via DOI.")
+    parser.add_argument("--with-crossref", action="store_true", help="Use Crossref online publication dates and fallback abstracts via DOI.")
     parser.add_argument("--with-pubmed", action="store_true", help="Fallback: use Europe PMC/PubMed abstracts via DOI.")
     parser.add_argument("--with-s2", action="store_true", help="Fallback: use Semantic Scholar abstracts via DOI.")
     parser.add_argument("--years-back", type=int, default=2, help="Keep publications from current_year - N.")
@@ -421,10 +502,14 @@ def main() -> int:
         return 2
 
     cfg = FetchConfig(mailto=args.mailto, pause_seconds=max(0.0, args.pause))
+    date_overrides = load_date_overrides(args.date_overrides) if args.date_overrides else {}
     pubs = collect_publications(orcids, cfg)
-    pubs = filter_year_window(pubs, args.years_back, args.years_forward)
-
-    if args.with_details or args.with_crossref or args.with_pubmed or args.with_s2:
+    if args.with_details or args.with_crossref or args.with_pubmed or args.with_s2 or date_overrides:
+        for pub in pubs:
+            doi = normalize_doi(pub.get("doi"))
+            if doi and doi.lower() in date_overrides:
+                pub["date"] = date_overrides[doi.lower()]
+        pubs = filter_year_window(pubs, args.years_back, args.years_forward, include_undated=True)
         enrich_publications(
             pubs,
             cfg,
@@ -432,8 +517,10 @@ def main() -> int:
             with_crossref=args.with_crossref,
             with_pubmed=args.with_pubmed,
             with_s2=args.with_s2,
+            date_overrides=date_overrides,
         )
 
+    pubs = filter_year_window(pubs, args.years_back, args.years_forward)
     pubs.sort(key=sort_key, reverse=True)
     if args.max_items and args.max_items > 0:
         pubs = pubs[: args.max_items]

@@ -3,9 +3,11 @@
 
   const DEFAULTS = {
     dataUrl: "./data/publications.json",
+    mediaUrl: null,
     containerId: "pub-news",
     maxItems: 20,
     featuredCount: 5,
+    featuredDays: 90,
     locale: "en-US",
     language: "en",
     cache: "daily", // "daily", "hourly", false
@@ -19,18 +21,32 @@
       loadError: "Could not load publications.",
       empty: "No publications found.",
       invalid: "Invalid publication data format.",
-      subtitle: (count) => `Showing the latest ${count} publications retrieved from ORCID profiles.`,
-      noTitle: "No title",
-      noAbstract: "Abstract not available — please follow the DOI link."
+      count: (shown, total) => shown === total ? `${total} publications` : `${shown} of ${total} publications`,
+      filter: "Filter by author",
+      allAuthors: "All authors",
+      authorAction: (name) => `Filter by ${name}`,
+      featured: "New publications",
+      graphical: "Graphical abstracts",
+      graphicalAbstract: "Graphical abstract",
+      more: "More publications",
+      abstract: "Abstract",
+      noTitle: "No title"
     },
     de: {
       loading: "Publikationen werden geladen…",
       loadError: "Publikationen konnten nicht geladen werden.",
       empty: "Keine Publikationen gefunden.",
       invalid: "Ungültiges Publikationsdatenformat.",
-      subtitle: (count) => `Anzeige der neuesten ${count} Publikationen aus ORCID-Profilen.`,
-      noTitle: "Ohne Titel",
-      noAbstract: "Abstract nicht verfügbar – bitte dem DOI-Link folgen."
+      count: (shown, total) => shown === total ? `${total} Publikationen` : `${shown} von ${total} Publikationen`,
+      filter: "Nach Autor filtern",
+      allAuthors: "Alle Autorinnen und Autoren",
+      authorAction: (name) => `Nach ${name} filtern`,
+      featured: "Neue Publikationen",
+      graphical: "Graphical Abstracts",
+      graphicalAbstract: "Graphical Abstract",
+      more: "Weitere Publikationen",
+      abstract: "Abstract",
+      noTitle: "Ohne Titel"
     }
   };
 
@@ -77,17 +93,32 @@
     container.classList.add("pub-news-widget");
     renderStatus(container, messages.loading);
 
-    fetch(withCacheBuster(config.dataUrl, config.cache), { cache: "no-cache", credentials: "omit" })
-      .then((response) => {
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json();
-      })
-      .then((data) => normalizeItems(data))
-      .then((items) => render(container, items, config, messages))
+    Promise.all([
+      loadJson(config.dataUrl, config.cache).then(normalizeItems),
+      loadMedia(config)
+    ])
+      .then(([items, media]) => render(container, items, config, messages, media))
       .catch((error) => {
         console.error("Failed to load publication data:", error);
         renderStatus(container, messages.loadError);
       });
+  }
+
+  async function loadJson(url, cache) {
+    const response = await fetch(withCacheBuster(url, cache), { cache: "no-cache", credentials: "omit" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return response.json();
+  }
+
+  async function loadMedia(config) {
+    if (config.mediaUrl === false) return {};
+    try {
+      const dataUrl = new URL(config.dataUrl, window.location.href);
+      const url = config.mediaUrl || new URL("publication-media.json", dataUrl).href;
+      return (await loadJson(url, config.cache)) || {};
+    } catch (_) {
+      return {};
+    }
   }
 
   function normalizeItems(data) {
@@ -96,110 +127,287 @@
     return null;
   }
 
-  function render(container, items, config, messages) {
+  function render(container, items, config, messages, media = {}) {
     if (!Array.isArray(items)) {
       renderStatus(container, messages.invalid);
       return;
     }
 
+    const now = new Date();
+    const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    const maxItems = toPositiveInt(config.maxItems, DEFAULTS.maxItems);
+    const earliestFeatured = today - toPositiveInt(config.featuredDays, DEFAULTS.featuredDays) * 86400000;
+    const authorDirectory = indexAuthors(media.authors);
     const sorted = items
       .filter((item) => item && (item.title || item.doi || item.url))
-      .slice()
-      .sort((a, b) => parseDateValue(b.date) - parseDateValue(a.date))
-      .slice(0, toPositiveInt(config.maxItems, DEFAULTS.maxItems));
+      .map((item) => ({
+        item,
+        date: parseDateParts(item.date),
+        authors: publicationAuthors(item.authors, authorDirectory)
+      }))
+      .filter(({ date }) => !date || date.timestamp <= today)
+      .sort((a, b) => (b.date?.timestamp ?? -Infinity) - (a.date?.timestamp ?? -Infinity));
 
     if (!sorted.length) {
       renderStatus(container, messages.empty);
       return;
     }
 
-    const featuredCount = Math.min(toPositiveInt(config.featuredCount, DEFAULTS.featuredCount), sorted.length);
-    const featured = sorted.slice(0, featuredCount);
-    const rest = sorted.slice(featuredCount);
-
     const root = document.createElement("div");
     root.className = "pub-news-layout";
 
     if (config.showHeader !== false) {
-      root.appendChild(createHeader(config.title, messages.subtitle(sorted.length)));
+      const header = document.createElement("header");
+      header.className = "pub-news-header";
+      const title = document.createElement("h2");
+      title.className = "pub-news-header__title";
+      title.textContent = config.title || DEFAULTS.title;
+      header.appendChild(title);
+      root.appendChild(header);
     }
 
-    const featuredSection = document.createElement("section");
-    featuredSection.className = "pub-news-featured";
-    featured.forEach((publication, index) => {
-      const card = createCard(publication, true, config, messages);
-      if (index === 0) card.classList.add("pub-card--featured-main");
-      featuredSection.appendChild(card);
-    });
-    root.appendChild(featuredSection);
+    const toolbar = document.createElement("div");
+    toolbar.className = "pub-news-toolbar";
+    const authorOptions = new Map();
+    sorted.forEach(({ authors }) => authors.forEach((author) => authorOptions.set(author.id, author.name)));
 
-    if (rest.length) {
-      const restSection = document.createElement("section");
-      restSection.className = "pub-news-rest";
-      rest.forEach((publication) => restSection.appendChild(createCard(publication, false, config, messages)));
-      root.appendChild(restSection);
+    const select = document.createElement("select");
+    select.appendChild(new Option(messages.allAuthors, ""));
+    const byName = new Intl.Collator(config.locale);
+    [...authorOptions]
+      .sort(([, a], [, b]) => byName.compare(a, b))
+      .forEach(([id, name]) => select.appendChild(new Option(name, id)));
+
+    if (authorOptions.size) {
+      const label = document.createElement("label");
+      label.className = "pub-news-toolbar__filter";
+      const caption = document.createElement("span");
+      caption.textContent = messages.filter;
+      label.append(caption, select);
+      toolbar.appendChild(label);
     }
 
+    const count = document.createElement("span");
+    count.className = "pub-news-toolbar__count";
+    count.setAttribute("role", "status");
+    toolbar.appendChild(count);
+    root.appendChild(toolbar);
+
+    const results = document.createElement("div");
+    results.className = "pub-news-results";
+    root.appendChild(results);
+
+    function selectAuthor(id) {
+      select.value = select.value === id ? "" : id;
+      renderResults();
+      select.focus();
+    }
+
+    function renderResults() {
+      const selected = select.value;
+      const matching = selected ? sorted.filter(({ authors }) => authors.some(({ id }) => id === selected)) : sorted;
+      const featuredCount = Math.min(toPositiveInt(config.featuredCount, DEFAULTS.featuredCount), maxItems);
+      const featured = matching
+        .filter(({ date }) => date?.precision === "day" && date.timestamp >= earliestFeatured)
+        .slice(0, featuredCount);
+      const rest = matching.filter((entry) => !featured.includes(entry)).slice(0, maxItems - featured.length);
+      const graphical = rest.filter(({ item }) => graphicalAbstract(item, media));
+      const other = rest.filter((entry) => !graphical.includes(entry));
+
+      count.textContent = messages.count(featured.length + rest.length, matching.length);
+      results.replaceChildren();
+      appendSection(results, featured, "featured", messages.featured, config, messages, media, selectAuthor, selected);
+      appendSection(results, graphical, "graphical", messages.graphical, config, messages, media, selectAuthor, selected);
+      appendSection(results, other, "rest", messages.more, config, messages, media, selectAuthor, selected);
+    }
+
+    select.addEventListener("change", renderResults);
+    renderResults();
     container.replaceChildren(root);
   }
 
-  function createHeader(titleText, subtitleText) {
-    const header = document.createElement("div");
-    header.className = "pub-news-header";
-
-    const title = document.createElement("h2");
-    title.className = "pub-news-header__title";
-    title.textContent = titleText || DEFAULTS.title;
-
-    const subtitle = document.createElement("p");
-    subtitle.className = "pub-news-header__subtitle";
-    subtitle.textContent = subtitleText;
-
-    header.append(title, subtitle);
-    return header;
+  function authorKey(name) {
+    return name.normalize("NFKC").toLowerCase().replaceAll(".", "").replace(/\s+/g, " ").trim();
   }
 
-  function createCard(pub, isFeatured, config, messages) {
+  function indexAuthors(authors) {
+    const directory = new Map();
+    Object.entries(authors || {}).forEach(([id, entry]) => {
+      if (typeof entry?.name !== "string" || !entry.name.trim()) return;
+      const person = { ...entry, id };
+      const names = [entry.name, ...(Array.isArray(entry.aliases) ? entry.aliases : [])];
+      names.filter((name) => typeof name === "string" && name.trim()).forEach((name) => {
+        const key = authorKey(name);
+        const existing = directory.get(key);
+        if (!directory.has(key) || existing?.id === id) directory.set(key, person);
+        else directory.set(key, null);
+      });
+    });
+    return directory;
+  }
+
+  function publicationAuthors(value, directory) {
+    const people = new Map();
+    String(value || "").split(",").map((name) => name.trim()).filter(Boolean).forEach((name) => {
+      const key = authorKey(name);
+      const person = directory.get(key) || { id: `name:${key}`, name };
+      if (!people.has(person.id)) people.set(person.id, person);
+    });
+    return [...people.values()];
+  }
+
+  function appendSection(root, entries, layout, label, config, messages, media, selectAuthor, selected) {
+    if (!entries.length) return;
+    const section = document.createElement("section");
+    section.className = `pub-news-section pub-news-section--${layout}`;
+    const heading = document.createElement(config.showHeader === false ? "h2" : "h3");
+    heading.className = "pub-news-section__title";
+    heading.textContent = label;
+    const grid = document.createElement("div");
+    grid.className = "pub-news-grid";
+    entries.forEach((entry, index) => {
+      const lead = layout === "featured" && index === 0;
+      grid.appendChild(createCard(entry, lead, config, messages, media, selectAuthor, selected));
+    });
+    section.append(heading, grid);
+    root.appendChild(section);
+  }
+
+  function createCard({ item: pub, authors }, lead, config, messages, media, selectAuthor, selected) {
     const card = document.createElement("article");
     card.className = "pub-card";
-    if (isFeatured) card.classList.add("pub-card--featured");
+    if (lead) card.classList.add("pub-card--lead");
 
-    const title = document.createElement("h3");
-    title.className = "pub-card__title";
-
-    const linkUrl = safeLink(pub.url || (pub.doi ? `https://doi.org/${pub.doi}` : ""));
-    if (linkUrl) {
-      const link = document.createElement("a");
-      link.href = linkUrl;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.textContent = pub.title || messages.noTitle;
-      title.appendChild(link);
-    } else {
-      title.textContent = pub.title || messages.noTitle;
-    }
+    const body = document.createElement("div");
+    body.className = "pub-card__body";
+    const heading = document.createElement("div");
+    heading.className = "pub-card__heading";
+    body.appendChild(heading);
 
     const meta = document.createElement("p");
     meta.className = "pub-card__meta";
-    const parts = [pub.journal, formatDate(pub.date, config.locale)].filter(Boolean);
-    meta.textContent = parts.join(" · ");
+    meta.textContent = [pub.journal, formatDate(pub.date, config.locale)].filter(Boolean).join(" · ");
+    if (meta.textContent) heading.appendChild(meta);
 
-    const authors = document.createElement("p");
-    authors.className = "pub-card__authors";
-    authors.textContent = pub.authors || "";
+    const title = document.createElement(config.showHeader === false ? "h3" : "h4");
+    title.className = "pub-card__title";
+    const titleText = pub.title || messages.noTitle;
+    const url = safeLink(pub.url) || safeLink(pub.doi ? `https://doi.org/${pub.doi}` : "");
+    if (url) title.appendChild(externalLink(url, titleText));
+    else title.textContent = titleText;
+    heading.appendChild(title);
 
-    const abstract = document.createElement("p");
-    abstract.className = "pub-card__abstract";
-    const abstractText = String(pub.abstract || "").trim();
-    if (abstractText) {
-      abstract.textContent = shorten(abstractText, isFeatured ? 520 : 260);
-    } else {
-      abstract.textContent = messages.noAbstract;
-      abstract.classList.add("pub-card__abstract--muted");
+    if (authors.length) heading.appendChild(createAuthors(authors, messages, selectAuthor, selected));
+
+    const abstract = String(pub.abstract || "").trim();
+    if (abstract) body.appendChild(createAbstract(abstract, lead, messages.abstract));
+
+    card.appendChild(body);
+    const graphic = graphicalAbstract(pub, media);
+    if (graphic) card.prepend(createGraphic(graphic, titleText, messages.graphicalAbstract));
+    return card;
+  }
+
+  function createAbstract(abstract, lead, label) {
+    const excerpt = document.createElement("div");
+    excerpt.className = "pub-card__excerpt";
+    if (lead) {
+      const preview = document.createElement("p");
+      preview.className = "pub-card__preview";
+      preview.textContent = shorten(abstract, 260);
+      excerpt.appendChild(preview);
+    }
+    if (!lead || abstract.length > 260) {
+      const details = document.createElement("details");
+      details.className = "pub-card__details";
+      const summary = document.createElement("summary");
+      summary.textContent = label;
+      const paragraph = document.createElement("p");
+      paragraph.textContent = abstract;
+      details.append(summary, paragraph);
+      excerpt.appendChild(details);
     }
 
-    card.append(title, meta, authors, abstract);
-    return card;
+    return excerpt;
+  }
+
+  function graphicalAbstract(pub, media) {
+    const doi = String(pub.doi || "").trim().toLowerCase();
+    const entry = media.graphicalAbstracts?.[doi];
+    return entry && safeLink(entry.image) ? entry : null;
+  }
+
+  function createGraphic(graphic, title, label) {
+    const figure = document.createElement("figure");
+    figure.className = "pub-card__graphic";
+    const url = safeLink(graphic.image);
+    const link = externalLink(url, "");
+    const image = document.createElement("img");
+    image.alt = graphic.alt || `${label}: ${title}`;
+    image.loading = "lazy";
+    image.decoding = "async";
+    image.referrerPolicy = "no-referrer";
+    image.addEventListener("error", () => figure.remove(), { once: true });
+    image.src = url;
+    link.appendChild(image);
+    const caption = document.createElement("figcaption");
+    caption.textContent = label;
+    const license = safeLink(graphic.licenseUrl);
+    if (graphic.license && license) {
+      caption.append(" · ", externalLink(license, graphic.license));
+    }
+    figure.append(link, caption);
+    return figure;
+  }
+
+  function createAuthors(people, messages, selectAuthor, selected) {
+    const authors = document.createElement("div");
+    authors.className = "pub-card__authors";
+    const stack = document.createElement("div");
+    stack.className = "pub-card__portraits";
+
+    people.filter((person) => safeLink(person.image)).slice(0, 4).forEach((person) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "pub-card__portrait";
+      button.title = person.name;
+      button.setAttribute("aria-label", messages.authorAction(person.name));
+      button.setAttribute("aria-pressed", String(person.id === selected));
+      button.addEventListener("click", () => selectAuthor(person.id));
+
+      const image = document.createElement("img");
+      image.alt = "";
+      image.width = 34;
+      image.height = 34;
+      image.loading = "lazy";
+      image.referrerPolicy = "no-referrer";
+      image.addEventListener("error", () => {
+        button.remove();
+        if (!stack.childElementCount) stack.remove();
+      }, { once: true });
+      const position = person.position;
+      if (Array.isArray(position) && position.length === 2 && position.every((value) => Number.isFinite(value) && value >= 0 && value <= 100)) {
+        image.style.objectPosition = `${position[0]}% ${position[1]}%`;
+      }
+      button.appendChild(image);
+      stack.appendChild(button);
+      image.src = safeLink(person.image);
+    });
+
+    if (stack.childElementCount) authors.appendChild(stack);
+    const names = document.createElement("span");
+    names.textContent = people.map(({ name }) => name).join(", ");
+    authors.appendChild(names);
+    return authors;
+  }
+
+  function externalLink(url, text) {
+    const link = document.createElement("a");
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = text;
+    return link;
   }
 
   function renderStatus(container, message) {
@@ -209,40 +417,39 @@
     container.replaceChildren(box);
   }
 
-  function parseDateValue(value) {
-    const parts = parseDateParts(value);
-    if (!parts) return 0;
-    return Date.UTC(parts.year, Math.max(parts.month - 1, 0), Math.max(parts.day, 1));
-  }
-
   function parseDateParts(value) {
     if (!value) return null;
-    const match = String(value).trim().match(/^(\d{4})(?:-(\d{1,2})(?:-(\d{1,2}))?)?/);
+    const match = String(value).trim().match(/^(\d{4})(?:-(\d{1,2})(?:-(\d{1,2}))?)?$/);
     if (!match) return null;
-    return {
-      year: Number(match[1]),
-      month: Number(match[2] || 1),
-      day: Number(match[3] || 1),
-      precision: match[3] ? "day" : match[2] ? "month" : "year"
-    };
+
+    const year = Number(match[1]);
+    const month = Number(match[2] || 1);
+    const day = Number(match[3] || 1);
+    const timestamp = Date.UTC(year, month - 1, day);
+    const date = new Date(timestamp);
+    if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) {
+      return null;
+    }
+    return { timestamp, precision: match[3] ? "day" : match[2] ? "month" : "year" };
   }
 
   function formatDate(value, locale) {
     const parts = parseDateParts(value);
     if (!parts) return "";
-    const date = new Date(Date.UTC(parts.year, parts.month - 1, parts.day));
     const options = parts.precision === "year"
       ? { year: "numeric", timeZone: "UTC" }
       : parts.precision === "month"
         ? { year: "numeric", month: "short", timeZone: "UTC" }
         : { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" };
-    return new Intl.DateTimeFormat(locale || "en-US", options).format(date);
+    return new Intl.DateTimeFormat(locale || "en-US", options).format(parts.timestamp);
   }
 
   function shorten(text, maxLen) {
     const max = toPositiveInt(maxLen, 250);
     if (text.length <= max) return text;
-    return text.slice(0, max - 1).trimEnd() + "…";
+    const cut = text.slice(0, max - 1);
+    const lastSpace = cut.lastIndexOf(" ");
+    return (lastSpace > max * .8 ? cut.slice(0, lastSpace) : cut.trimEnd()) + "…";
   }
 
   function toPositiveInt(value, fallback) {

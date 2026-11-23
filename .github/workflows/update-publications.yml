@@ -28,6 +28,7 @@ jobs:
         run: >-
           python fetch_publications.py
           --orcid-file orcids.txt
+          --date-overrides publication-date-overrides.json
           --out docs/data/publications.json
           --with-details
           --detail-count 80

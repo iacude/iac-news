@@ -23,6 +23,7 @@ requirements.txt                         Python-Abhängigkeiten
 docs/index.html                          GitHub-Pages-Testseite
 docs/publications-widget.css             Widget-CSS
 docs/publications-widget.js              Widget-JavaScript
+docs/data/publication-media.json         Bildzuordnungen
 docs/data/publications.json              Veröffentlichte Publikationsdaten
 snippets/imperia-external-assets-snippet.html  Kompakte Imperia-Einbindung
 snippets/imperia-inline-widget.html             Platzhalter für vollständige Inline-Einbindung
@@ -60,13 +61,14 @@ https://USERNAME.github.io/REPOSITORY/data/publications.json
 
 ## 3. Automatische Aktualisierung
 
-Der Workflow `.github/workflows/update-publications.yml` läuft standardmäßig täglich um `05:17 UTC` und kann zusätzlich manuell über `Actions → Update publications data → Run workflow` gestartet werden.
+Der Workflow `.github/workflows/update-publications.yml` läuft standardmäßig freitags um `05:17 UTC` und kann zusätzlich manuell über `Actions → Update publications data → Run workflow` gestartet werden.
 
 Der zentrale Befehl im Workflow ist:
 
 ```bash
 python fetch_publications.py \
   --orcid-file orcids.txt \
+  --date-overrides publication-date-overrides.json \
   --out docs/data/publications.json \
   --with-details \
   --detail-count 80 \
@@ -80,7 +82,20 @@ python fetch_publications.py \
 
 Wenn sich die JSON-Datei geändert hat, committet GitHub Actions sie automatisch zurück ins Repository. Dadurch wird GitHub Pages aktualisiert.
 
-## 4. Imperia-Einbindung
+Der Workflow fragt über die DOI das Online-Publikationsdatum bei Crossref ab. Ein tagesgenaues Online-Datum hat Vorrang vor dem ORCID-Datum. Wenn bei beiden Quellen eine genauere Angabe fehlt, bleibt die vorhandene Jahres- oder Monatsangabe erhalten. Für fehlende oder falsche Angaben kann das Datum nach Prüfung auf der Verlagsseite in `publication-date-overrides.json` als DOI mit Datum im Format `YYYY-MM-DD` hinterlegt werden. Diese Korrekturen haben bei jedem Lauf Vorrang.
+
+Das Widget blendet bekannte zukünftige Termine aus. Für die hervorgehobenen Karten kommen nur tagesgenau datierte Publikationen aus den letzten 90 Tagen infrage. Das Zeitfenster lässt sich mit `featuredDays` und die Zahl der Karten mit `featuredCount` einstellen.
+
+## 4. Bilder und Autorenfilter
+
+Die Bildzuordnung steht in `docs/data/publication-media.json`. Der Publikationsworkflow aktualisiert nur `publications.json`. Bildzuordnungen bleiben deshalb beim nächsten Lauf erhalten. Die Porträt-URLs stammen aus den veröffentlichten IAC-Profilen und dem ZWU-Verzeichnis der UDE. Crossref ergänzt fehlende Autorenlisten und Listen mit getrennt gespeicherten Nachnamen und Initialen, wenn die DOI hinterlegt ist.
+
+- Unter `graphicalAbstracts` steht pro kleingeschriebener DOI die Bild-URL. `license` und `licenseUrl` ergänzen den Lizenzhinweis. Mit `alt` lässt sich die Grafik beschreiben.
+- Unter `authors` bekommt jede Person einen stabilen Schlüssel. Wenn eine bestätigte ORCID vorliegt, kann sie als Schlüssel dienen. `name` ist der Anzeigename, `aliases` listet bestätigte Schreibweisen und `image` verweist auf die öffentlich publizierte Bilddatei aus Imperia. `profile` dokumentiert die Quelle des Porträts. Falls der Standardausschnitt das Gesicht schlecht trifft, lässt sich der Bildfokus mit `position: [50, 35]` als horizontale und vertikale Prozentangabe anpassen.
+- Der Filter berücksichtigt alle verfügbaren Publikationen im Datensatz, bevor `maxItems` angewandt wird. Berücksichtigte Namensvarianten erscheinen als eine Person. Auf den Karten werden bis zu vier vorhandene Porträts gestapelt. Ein Klick auf ein Porträt filtert nach dieser Person oder hebt deren aktiven Filter auf. Alle Namen bleiben sichtbar.
+- Die Mediendatei wird standardmäßig neben `publications.json` geladen. Eine andere Quelle kann über `mediaUrl` angegeben werden. Mit `mediaUrl: false` läuft das Widget ohne Bilddatei weiter. Die Filterung nach vorhandenen Autorennamen bleibt verfügbar.
+
+## 5. Imperia-Einbindung
 
 Die kompakte Variante steht in:
 
@@ -117,7 +132,7 @@ snippets/imperia-inline-widget.html
 
 Dort die Inhalte aus `docs/publications-widget.css` und `docs/publications-widget.js` direkt einfügen. Die JSON wird weiterhin von GitHub Pages geladen.
 
-## 5. Wichtige Konfigurationsoptionen im Widget
+## 6. Wichtige Konfigurationsoptionen im Widget
 
 ```js
 window.PUBLICATIONS_WIDGET_CONFIG = {
@@ -132,7 +147,7 @@ window.PUBLICATIONS_WIDGET_CONFIG = {
 };
 ```
 
-## 6. Testen
+## 7. Testen
 
 Lokal ohne Server ist der JSON-Fetch je nach Browser eingeschränkt. Für einen realistischen Test am besten einen kleinen lokalen Server starten:
 
@@ -158,7 +173,7 @@ JavaScript-Syntax prüfen, falls Node.js verfügbar ist:
 node --check docs/publications-widget.js
 ```
 
-## 7. Sicherheit und Grenzen
+## 8. Sicherheit und Grenzen
 
 - Keine vertraulichen oder embargo-behafteten Informationen in das Repository oder die JSON-Datei schreiben.
 - Das Widget verwendet `textContent` statt `innerHTML`; Titel, Autoren und Abstracts werden also nicht als HTML ausgeführt.
