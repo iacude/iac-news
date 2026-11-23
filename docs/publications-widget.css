@@ -161,7 +161,8 @@
   color: inherit;
 }
 
-.pub-card--lead .pub-card__title {
+.pub-news-widget .pub-card--lead .pub-card__title {
+  color: #fff;
   font-size: clamp(1.38rem, 3.4cqi, 2rem);
   line-height: 1.19;
 }
